@@ -17,3 +17,5 @@ You can use this framework free of charge both for personal, organization and co
 If you would like to contribute, you're very welcome to do so.
 
 We're using the fork and pull process, read more about it [here](https://help.github.com/articles/using-pull-requests/).
+
+You will need Visual Studio 2015 or another Visual Studio solution compatible IDE and Unity 5.1+.
