@@ -19,3 +19,7 @@
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
+
+# UnityContrib specific
+/Code/UnityContrib.UnityEditor/bin
+/Code/UnityContrib.UnityEngine/bin
