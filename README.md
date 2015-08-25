@@ -1,6 +1,7 @@
 # UnityContrib  - Framework
 The open-source framework designed to ease and enhance the development experience with the [Unity](https://unity3d.com) engine.
-The projected started [here](https://github.com/robintheilade/unityframework).
+
+This project will replace [this](https://github.com/robintheilade/unityframework) old project.
 
 ## Features
 
