@@ -13,6 +13,8 @@ The projected started [here](https://github.com/robintheilade/unityframework).
 
 You can use this framework free of charge both for personal, organization and commercial use.
 
+[Download](https://github.com/UnityContrib/framework/releases/latest)
+
 ## Contributing
 
 If you would like to contribute, you're very welcome to do so.
