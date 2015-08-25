@@ -23,3 +23,4 @@ sysinfo.txt
 # UnityContrib specific
 /Code/UnityContrib.UnityEditor/bin
 /Code/UnityContrib.UnityEngine/bin
+/Code/Releases
