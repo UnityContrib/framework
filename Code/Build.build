@@ -119,7 +119,7 @@
 
 	<target name="compress" description="Compresses the assemblies">
     <zip comment="Version: ${rth::to-assembly-file-version(now)}" zipfile="${baseDir}/Releases/UnityContrib.${rth::to-assembly-file-version(now)}.zip" ziplevel="9">
-      <fileset prefix="Debug" basedir="${baseDir}\UnityContrib.UnityEditor\bin\Debug">
+      <fileset prefix="Debug" basedir="${baseDir}\UnityContrib.UnityEngine\bin\Debug">
         <include name="UnityContrib*.dll"/>
         <include name="UnityContrib*.mdb"/>
         <include name="UnityContrib*.xml"/>
@@ -129,7 +129,7 @@
         <include name="UnityContrib*.mdb"/>
         <include name="UnityContrib*.xml"/>
       </fileset>
-      <fileset prefix="Release" basedir="${baseDir}\UnityContrib.UnityEditor\bin\Release">
+      <fileset prefix="Release" basedir="${baseDir}\UnityContrib.UnityEngine\bin\Release">
         <include name="UnityContrib*.dll"/>
         <include name="UnityContrib*.mdb"/>
         <include name="UnityContrib*.xml"/>

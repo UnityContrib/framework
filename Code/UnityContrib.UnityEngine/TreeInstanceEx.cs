@@ -27,8 +27,8 @@ namespace UnityContrib.UnityEngine
                 instance1.prototypeIndex == instance2.prototypeIndex &&
                 instance1.heightScale == instance2.heightScale &&
                 instance1.widthScale == instance2.widthScale &&
-                instance1.color == instance2.color &&
-                instance1.lightmapColor == instance2.lightmapColor
+                instance1.color.Equals(instance2.color) &&
+                instance1.lightmapColor.Equals(instance2.lightmapColor)
                 ;
         }
     }
