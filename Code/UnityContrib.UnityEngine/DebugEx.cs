@@ -3,7 +3,7 @@
 namespace UnityContrib.UnityEngine
 {
     /// <summary>
-    /// Provides aset of helper methods for debugging.
+    /// Provides a set of helper methods for debugging.
     /// </summary>
     public class DebugEx
     {

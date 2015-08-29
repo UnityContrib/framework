@@ -2,13 +2,13 @@
 
 ## UnityContrib.UnityEngine.BehaviourEx
 
-Provides a set of helper methods for working with the
+Provides a set of helper methods for working with the [UnityEngine.Behaviour](http://docs.unity3d.com/ScriptReference/Behaviour.html) class.
 
 ### Members
 
 #### DisableIfNull``1(``0,UnityEngine.Behaviour,System.String)
 
-Disables the behaviour if the specified
+Disables the behaviour if the specified value is null.
 
 ##### value
 
@@ -24,37 +24,35 @@ The name of the value variable used in the warning message.
 
 ## UnityContrib.UnityEngine.Color32Ex
 
-Provides a set of helper methods for working with the
+Provides a set of helper methods for working with the [UnityEngine.Color32](http://docs.unity3d.com/ScriptReference/Color32.html) struct.
 
 ### Members
 
 #### Equals(UnityEngine.Color32,UnityEngine.Color32)
 
-Returns a value indicating whether or not the specified
+Returns a value indicating whether or not the specified [UnityEngine.Color32](http://docs.unity3d.com/ScriptReference/Color32.html) are equal.
 
 ##### value
 
-The left side
+The left side [UnityEngine.Color32](http://docs.unity3d.com/ScriptReference/Color32.html) of the comparison.
 
 ##### other
 
-The right side
+The right side [UnityEngine.Color32](http://docs.unity3d.com/ScriptReference/Color32.html) of the comparison.
 
 ##### returns
-
-
 
 true if equal; otherwise false.
 
 ## UnityContrib.UnityEngine.DebugEx
 
-Provides aset of helper methods for debugging.
+Provides a set of helper methods for debugging.
 
 ### Members
 
 #### DrawCross3D(UnityEngine.Vector3,System.Single,UnityEngine.Color,System.Single,System.Boolean)
 
-Draws 3 lines intersecting each other at the specified
+Draws 3 lines intersecting each other at the specified position .
 
 ##### position
 
@@ -78,7 +76,7 @@ A value indicating whether or not the line be obscured by objects closer to the 
 
 ## UnityContrib.UnityEngine.GUIEx
 
-Provides helper methods for working with the
+Provides helper methods for working with the [UnityEngine.GUI](http://docs.unity3d.com/ScriptReference/GUI.html) class.
 
 ### Members
 
@@ -112,13 +110,13 @@ The callback that renders the controls.
 
 ##### returns
 
-
-
 The modified scrollPosition. Feed this back into the variable you pass in.
 
 ## UnityContrib.UnityEngine.GUILayoutEx
 
-Provides helper methods for working with the
+Provides helper methods for working with the [UnityEngine.GUILayout](http://docs.unity3d.com/ScriptReference/GUILayout.html) class.
+
+Provides helper methods for working with the [UnityEngine.GUILayout](http://docs.unity3d.com/ScriptReference/GUILayout.html) class.
 
 ### Members
 
@@ -306,7 +304,7 @@ Provides methods for doing measurements of code execution.
 
 #### Time(System.Action)
 
-Measures the time the specified
+Measures the time the specified action takes to execute.
 
 ##### action
 
@@ -314,7 +312,7 @@ The action to measure.
 
 #### DebugLogTime(System.String,System.Action)
 
-Measures the time the specified
+Measures the time the specified action takes to execute.
 
 ##### caption
 
@@ -326,21 +324,19 @@ The action to measure.
 
 ## UnityContrib.UnityEngine.NavMeshAgentEx
 
-Provides a set of helper methods for working with the
+Provides a set of helper methods for working with the [UnityEngine.NavMeshAgent](http://docs.unity3d.com/ScriptReference/NavMeshAgent.html) class.
 
 ### Members
 
 #### IsNavigating(UnityEngine.NavMeshAgent)
 
-Returns a value indicating whether or not the specified
+Returns a value indicating whether or not the specified agent is planning or following a path.
 
 ##### agent
 
 The agent to query.
 
 ##### returns
-
-
 
 true if the agent is planning or following a path; otherwise false.
 
@@ -372,7 +368,7 @@ Gets the number of values inside this tree.
 
 #### #ctor(UnityEngine.Rect,System.Int32)
 
-Initializes a new instance of the
+Initializes a new instance of the Quadtree`1 class.
 
 ##### boundaries
 
@@ -400,8 +396,6 @@ The value to insert.
 
 ##### returns
 
-
-
 true if the value was inserted into the region; false if the value's position was outside the region.
 
 #### Insert(UnityEngine.Vector2,`0)
@@ -418,8 +412,6 @@ The value to insert.
 
 ##### returns
 
-
-
 true if the value was inserted into the region; false if the value's position was outside the region.
 
 #### Insert(UnityContrib.UnityEngine.Quadtree{`0}.QuadtreeNode)
@@ -432,21 +424,17 @@ The node to insert.
 
 ##### returns
 
-
-
 true if the node was inserted into the region; false if the position of the node was outside the region.
 
 #### Find(UnityEngine.Rect)
 
-Returns the values that are within the specified
+Returns the values that are within the specified range .
 
 ##### range
 
 A rectangle representing the region to query.
 
 ##### returns
-
-
 
 Any value found inside the specified
 
@@ -468,8 +456,6 @@ The value to remove.
 
 ##### returns
 
-
-
 true if the value was removed from the region; false if the value's position was outside the region.
 
 #### Remove(UnityEngine.Vector2,`0)
@@ -485,8 +471,6 @@ The position of the value.
 The value to remove.
 
 ##### returns
-
-
 
 true if the value was removed from the region; false if the value's position was outside the region.
 
@@ -514,7 +498,7 @@ Gets the value.
 
 #### #ctor(UnityEngine.Vector2,`0)
 
-Initializes a new instance of the
+Initializes a new instance of the QuadtreeNode class.
 
 ##### position
 
@@ -536,8 +520,6 @@ Returns a random point inside a circle with a radius of 1. The Y component is al
 
 ##### returns
 
-
-
 The random vector.
 
 #### Vector3XZ(System.Single)
@@ -550,45 +532,41 @@ This distance from the center of the circle to the point.
 
 ##### returns
 
-
-
 The random vector.
 
 ## UnityContrib.UnityEngine.TransformEx
 
-Provides helper methods for working with the
+Provides helper methods for working with the [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) class.
 
 ### Members
 
 #### DestroyAllChildren(UnityEngine.Transform)
 
-Destroys all the children of the specified
+Destroys all the children of the specified parent  [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) .
 
 ##### parent
 
-The parent
+The parent [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) who's children to destroy.
 
 ## UnityContrib.UnityEngine.TreeInstanceEx
 
-Provides a set of helper methods for working with the
+Provides a set of helper methods for working with the [UnityEngine.TreeInstance](http://docs.unity3d.com/ScriptReference/TreeInstance.html) class.
 
 ### Members
 
 #### Same(UnityEngine.TreeInstance,UnityEngine.TreeInstance)
 
-Compares two instances of
+Compares two instances of [UnityEngine.TreeInstance](http://docs.unity3d.com/ScriptReference/TreeInstance.html) .
 
 ##### instance1
 
-One of the
+One of the [UnityEngine.TreeInstance](http://docs.unity3d.com/ScriptReference/TreeInstance.html) .
 
 ##### instance2
 
-The other
+The other [UnityEngine.TreeInstance](http://docs.unity3d.com/ScriptReference/TreeInstance.html) .
 
 ##### returns
-
-
 
 true if the state of both instances are the same; otherwise false.
 

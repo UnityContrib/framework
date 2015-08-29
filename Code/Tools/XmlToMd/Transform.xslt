@@ -133,31 +133,84 @@
     </xsl:choose>
   </xsl:template>
   <xsl:template match="param">
-    <xsl:value-of select="concat('##### ', @name, $newline2, normalize-space(text()), $newline2)"/>
+    <xsl:variable name="param">
+      <xsl:for-each select="*|text()">
+        <xsl:choose>
+          <xsl:when test="self::text()">
+            <xsl:value-of select="normalize-space(.)"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:apply-templates select="."/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:for-each>
+    </xsl:variable>
+    <!--<xsl:value-of select="concat($param, $newline2)"/>-->
+    <xsl:value-of select="concat('##### ', @name, $newline2, $param, $newline2)"/>
   </xsl:template>
   <xsl:template match="returns">
-    <xsl:value-of select="concat('##### returns', $newline2, @name, $newline2, normalize-space(text()), $newline2)"/>
+    <xsl:value-of select="concat('##### returns', $newline2, normalize-space(text()), $newline2)"/>
+  </xsl:template>
+  <xsl:template match="summary">
+    <xsl:variable name="summary">
+      <xsl:for-each select="*|text()">
+        <xsl:choose>
+          <xsl:when test="self::text()">
+            <xsl:value-of select="normalize-space(.)"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:apply-templates select="."/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:for-each>
+    </xsl:variable>
+    <xsl:value-of select="concat($summary, $newline2)"/>
+  </xsl:template>
+  <xsl:template match="paramref">
+    <xsl:value-of select="concat(' ', @name, ' ')"/>
+  </xsl:template>
+  <xsl:template match="see">
+    <xsl:variable name="link">
+      <xsl:choose>
+        <xsl:when test="substring(@cref, 3, 12) = 'UnityEngine.' or substring(@cref, 3, 12) = 'Editor.'">
+          <xsl:value-of select="concat('[', substring(@cref, 3), '](http://docs.unity3d.com/ScriptReference/', substring(@cref, 15), '.html)')"/>
+        </xsl:when>
+        <xsl:when test="substring(@cref, 3, 7) = 'System.'">
+          <xsl:value-of select="concat('[', substring(@cref, 3), '](https://msdn.microsoft.com/en-us/library/', substring(@cref, 3), '%28v=vs.90%29.aspx)')"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="substring(@cref, 3)"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:value-of select="concat(' ', $link, ' ')"/>
   </xsl:template>
   <xsl:template name="renderType">
     <xsl:variable name="cleanName" select="substring(@name, 3)"/>
-    <xsl:value-of select="concat('## ', $cleanName, $newline2, normalize-space(./summary/text()), $newline2, '### Members', $newline2)"/>
+    <xsl:value-of select="concat('## ', $cleanName, $newline2)"/>
+    <xsl:apply-templates select="summary"/>
+    <xsl:value-of select="concat('### Members', $newline2)"/>
   </xsl:template>
   <xsl:template name="renderMethod">
     <xsl:variable name="cleanName" select="user:GetMethod(@name)"/>
-    <xsl:value-of select="concat('#### ', $cleanName, $newline2, normalize-space(./summary/text()), $newline2)"/>
+    <xsl:value-of select="concat('#### ', $cleanName, $newline2)"/>
+    <xsl:apply-templates select="summary"/>
     <xsl:apply-templates select="param"/>
     <xsl:apply-templates select="returns"/>
   </xsl:template>
   <xsl:template name="renderProperty">
     <xsl:variable name="cleanName" select="user:GetProperty(@name)"/>
-    <xsl:value-of select="concat('#### ', $cleanName, $newline2, normalize-space(./summary/text()), $newline2)"/>
+    <xsl:value-of select="concat('#### ', $cleanName, $newline2)"/>
+    <xsl:apply-templates select="summary"/>
   </xsl:template>
   <xsl:template name="renderField">
     <xsl:variable name="cleanName" select="user:GetField(@name)"/>
-    <xsl:value-of select="concat('#### ', $cleanName, $newline2, normalize-space(./summary/text()), $newline2)"/>
+    <xsl:value-of select="concat('#### ', $cleanName, $newline2)"/>
+    <xsl:apply-templates select="summary"/>
   </xsl:template>
   <xsl:template name="renderEvent">
     <xsl:variable name="cleanName" select="user:GetEvent(@name)"/>
-    <xsl:value-of select="concat('#### ', $cleanName, $newline2, normalize-space(./summary/text()), $newline2)"/>
+    <xsl:value-of select="concat('#### ', $cleanName, $newline2)"/>
+    <xsl:apply-templates select="summary"/>
   </xsl:template>
 </xsl:stylesheet>
