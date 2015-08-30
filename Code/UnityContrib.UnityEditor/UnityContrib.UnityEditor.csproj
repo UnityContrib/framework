@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Release\UnityContrib.UnityEditor.XML</DocumentationFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>UnityContrib Assembly.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="UnityEditor">
@@ -51,6 +54,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShaderUtilEx.cs" />
     <Compile Include="TerrainEx.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UnityContrib Assembly.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

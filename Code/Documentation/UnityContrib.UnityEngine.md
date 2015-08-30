@@ -120,6 +120,16 @@ The amount of seconds the line must be visible for. A duration of zero shows the
 
 A value indicating whether or not the line be obscured by objects closer to the camera?
 
+## UnityContrib.UnityEngine.DontDestroyOnLoad
+
+Component that tells the engine not to unload the game object when scene changes.
+
+### Members
+
+#### Awake
+
+Informs the engine not to unload the game object.
+
 ## UnityContrib.UnityEngine.GUIEx
 
 Provides helper methods for working with the [UnityEngine.GUI](http://docs.unity3d.com/ScriptReference/GUI.html) class.
@@ -675,4 +685,28 @@ The distance from the center position to the generated random position.
 ##### returns
 
 The generated random position.
+
+#### Within(UnityEngine.Vector3,System.Single,System.Single,System.Single)
+
+Returns a random position inside a box.
+
+##### position
+
+The center of the box.
+
+##### x
+
+The width of the box.
+
+##### y
+
+The height of the box.
+
+##### z
+
+The depth of the box.
+
+##### returns
+
+The random position inside the box.
 
