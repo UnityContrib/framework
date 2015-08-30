@@ -6,9 +6,8 @@ This project will replace [this](https://github.com/robintheilade/unityframework
 ## Features
 
 * Quad-tree
-* Extensions for the legacy GUI
-* Extensions for generating random values and instances
-* Instrumentation
+* Many extension methods (see API reference for details)
+* DontDestroyOnLoad behaviour
 
 ## Usage
 
@@ -16,7 +15,7 @@ You can use this framework free of charge both for personal, organization and co
 
 [Download](https://github.com/UnityContrib/framework/releases/latest)
 
-## Documentation
+## API reference
 
 [UnityContrib.UnityEditor](https://github.com/UnityContrib/framework/blob/master/Code/Documentation/UnityContrib.UnityEditor.md)
 
