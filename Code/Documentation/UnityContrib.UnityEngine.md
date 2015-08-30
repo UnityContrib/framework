@@ -1,5 +1,23 @@
 ﻿# Documentation for UnityContrib.UnityEngine
 
+## UnityContrib.UnityEngine.ArrayEx
+
+Provides a set of helper methods for working with the [System.Array](https://msdn.microsoft.com/en-us/library/System.Array%28v=vs.90%29.aspx) class.
+
+### Members
+
+#### IsNullOrEmpty(System.Array)
+
+Returns a value indicating if the specified array is null or is empty.
+
+##### array
+
+The array to evaluate.
+
+##### returns
+
+true if the array is null or empty; otherwise false.
+
 ## UnityContrib.UnityEngine.BehaviourEx
 
 Provides a set of helper methods for working with the [UnityEngine.Behaviour](http://docs.unity3d.com/ScriptReference/Behaviour.html) class.
@@ -65,6 +83,34 @@ The length of each line.
 ##### color
 
 The color of the lines.
+
+##### duration
+
+The amount of seconds the line must be visible for. A duration of zero shows the line for just one frame.
+
+##### depthTest
+
+A value indicating whether or not the line be obscured by objects closer to the camera?
+
+#### DrawPath(UnityEngine.NavMeshPath,UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color,System.Single,System.Boolean)
+
+Draws the specified path .
+
+##### path
+
+The path to draw.
+
+##### start
+
+The start of the path.
+
+##### end
+
+The end of the path.
+
+##### color
+
+The color of the line.
 
 ##### duration
 
@@ -340,6 +386,32 @@ The agent to query.
 
 true if the agent is planning or following a path; otherwise false.
 
+## UnityContrib.UnityEngine.NavMeshPathEx
+
+Provides a set of helper methods for working with the [UnityEngine.NavMeshPath](http://docs.unity3d.com/ScriptReference/NavMeshPath.html) class.
+
+### Members
+
+#### Distance(UnityEngine.NavMeshPath,UnityEngine.Vector3,UnityEngine.Vector3)
+
+Calculates the distance between the specified start and end using the specified path .
+
+##### path
+
+The path who's distance to calculate.
+
+##### start
+
+The start of the path.
+
+##### end
+
+The end of the path.
+
+##### returns
+
+The distance from start to end measured in Unity units.
+
 ## UnityContrib.UnityEngine.Quadtree`1
 
 A region quadtree implementation used for fast lookup in a two dimensional world.
@@ -534,6 +606,18 @@ This distance from the center of the circle to the point.
 
 The random vector.
 
+#### Random``1(``0[])
+
+Returns random element from the specified array .
+
+##### array
+
+The array containing the elements.
+
+##### returns
+
+The random element; or default value of
+
 ## UnityContrib.UnityEngine.TransformEx
 
 Provides helper methods for working with the [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) class.
@@ -569,4 +653,26 @@ The other [UnityEngine.TreeInstance](http://docs.unity3d.com/ScriptReference/Tre
 ##### returns
 
 true if the state of both instances are the same; otherwise false.
+
+## UnityContrib.UnityEngine.Vector3Ex
+
+Provides a set of helper methods for working with the [UnityEngine.Vector3](http://docs.unity3d.com/ScriptReference/Vector3.html) struct.
+
+### Members
+
+#### Around(UnityEngine.Vector3,System.Single)
+
+Returns a random position around the specified center position . The Y component of the random position will always be the same as the center position.
+
+##### position
+
+The center position to generate a random position around.
+
+##### distance
+
+The distance from the center position to the generated random position.
+
+##### returns
+
+The generated random position.
 

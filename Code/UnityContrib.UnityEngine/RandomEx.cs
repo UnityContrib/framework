@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using Random = UnityEngine.Random;
+using random = UnityEngine.Random;
 
 namespace UnityContrib.UnityEngine
 {
@@ -18,9 +18,9 @@ namespace UnityContrib.UnityEngine
         public static Vector3 Vector3XZ()
         {
             var vector = new Vector3(
-                Random.value * 2.0f - 1.0f,
+                random.value - 0.5f,
                 0.0f,
-                Random.value * 2.0f - 1.0f
+                random.value - 0.5f
                 );
             vector.Normalize();
             return vector;
@@ -41,6 +41,29 @@ namespace UnityContrib.UnityEngine
             var vector = RandomEx.Vector3XZ();
             vector *= distance;
             return vector;
+        }
+
+        /// <summary>
+        /// Returns random element from the specified <paramref name="array"/>.
+        /// </summary>
+        /// <typeparam name="T">
+        /// The type of the elements in the array.
+        /// </typeparam>
+        /// <param name="array">
+        /// The array containing the elements.
+        /// </param>
+        /// <returns>
+        /// The random element; or default value of <typeparamref name="T"/> if array is null or empty.
+        /// </returns>
+        public static T Random<T>(T[] array)
+        {
+            if(array.IsNullOrEmpty())
+            {
+                return default(T);
+            }
+
+            var element = array[random.Range(0, array.Length)];
+            return element;
         }
     }
 }
