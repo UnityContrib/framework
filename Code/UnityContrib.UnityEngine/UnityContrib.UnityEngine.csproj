@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArrayEx.cs" />
+    <Compile Include="BaseSelector.cs" />
+    <Compile Include="BaseSelector´1.cs" />
     <Compile Include="BehaviourEx.cs" />
     <Compile Include="Color32Ex.cs" />
     <Compile Include="DebugEx.cs" />

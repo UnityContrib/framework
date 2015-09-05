@@ -18,6 +18,50 @@ The array to evaluate.
 
 true if the array is null or empty; otherwise false.
 
+## UnityContrib.UnityEngine.BaseSelector
+
+Base implementation for selectors. A selector is a component that selects a [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) . The advantage of using this component is that you don't need to write the same find game object code over and over. You can simply attach an instance of a selector to a game object and let that instance find the [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) for you.
+
+### Members
+
+#### selected
+
+The cached reference to the selected [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) .
+
+#### Selected
+
+Gets the selected [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) .
+
+#### op_Implicit(UnityContrib.UnityEngine.BaseSelector)~UnityEngine.Transform
+
+Returns the selected [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) .
+
+##### selector
+
+The selector that selects the [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) .
+
+#### Select
+
+When implemented, returns the selected [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) .
+
+##### returns
+
+
+
+## UnityContrib.UnityEngine.BaseSelector`1
+
+Generic base implementation for selectors that selects [UnityEngine.Component](http://docs.unity3d.com/ScriptReference/Component.html) . A selector is a component that selects a [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) . The advantage of using this component is that you don't need to write the same find game object code over and over. You can simply attach an instance of a selector to a game object and let that instance find the [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) for you.
+
+### Members
+
+#### Select
+
+Returns the [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) containing thecomponent.
+
+##### returns
+
+
+
 ## UnityContrib.UnityEngine.BehaviourEx
 
 Provides a set of helper methods for working with the [UnityEngine.Behaviour](http://docs.unity3d.com/ScriptReference/Behaviour.html) class.
