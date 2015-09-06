@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <project name="UnityContrib.UnityFramework" default="build" xmlns="http://nant.sf.net/release/0.91/nant.xsd">
 
-	<script language="c#" prefix="rth">
+	<script language="c#" prefix="custom">
 		<code>
 			<![CDATA[
 			[Function( "to-assembly-version" )]
@@ -69,7 +69,7 @@
 
 	<property name="baseDir" value="${project::get-base-directory()}"/>
 	<property name="now" value="${datetime::now()}"/>
-	<property name="msBuild" value="C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe" />
+	<property name="msBuild" value="${environment::get-folder-path('ProgramFilesX86')}\MSBuild\14.0\Bin\MSBuild.exe" />
 
 	<target name="build" depends="updateVersion, compile, pdb2mdb, compress" description="Versioning, compile, generate MDB and compress">
 	</target>
@@ -82,7 +82,7 @@
 				</items>
 			</in>
 			<do>
-				<echo message="${rth::update-version(fileName, now)}"/>
+				<echo message="${custom::update-version(fileName, now)}"/>
 			</do>
 		</foreach>
 	</target>
@@ -93,12 +93,12 @@
 			<arg value="/t:Rebuild" />
 			<arg value="/p:Configuration=Debug" />
 		</exec>
-    <exec program="${msBuild}" verbose="true">
-      <arg value="${baseDir}\UnityContrib.sln" />
-      <arg value="/t:Rebuild" />
-      <arg value="/p:Configuration=Release" />
-    </exec>
-  </target>
+		<exec program="${msBuild}" verbose="true">
+			<arg value="${baseDir}\UnityContrib.sln" />
+			<arg value="/t:Rebuild" />
+			<arg value="/p:Configuration=Release" />
+		</exec>
+	</target>
 
 	<target name="pdb2mdb" description="Generates MDB files based on PDB files">
 		<foreach item="File" property="csprojFileName">
@@ -112,34 +112,34 @@
 				<property name="assemblyFileName" value="${name}.dll"/>
 				<property name="binDir" value="${path::get-directory-name(csprojFileName)}"/>
 				<exec program=".\Tools\Unity\pdb2mdb\pdb2mdb" verbose="true" commandline="${assemblyFileName}" workingdir="${binDir}\bin\Debug" />
-        <exec program=".\Tools\Unity\pdb2mdb\pdb2mdb" verbose="true" commandline="${assemblyFileName}" workingdir="${binDir}\bin\Release" />
-      </do>
+				<exec program=".\Tools\Unity\pdb2mdb\pdb2mdb" verbose="true" commandline="${assemblyFileName}" workingdir="${binDir}\bin\Release" />
+			</do>
 		</foreach>
 	</target>
 
 	<target name="compress" description="Compresses the assemblies">
-    <zip comment="Version: ${rth::to-assembly-file-version(now)}" zipfile="${baseDir}/Releases/UnityContrib.${rth::to-assembly-file-version(now)}.zip" ziplevel="9">
-      <fileset prefix="Debug" basedir="${baseDir}\UnityContrib.UnityEngine\bin\Debug">
-        <include name="UnityContrib*.dll"/>
-        <include name="UnityContrib*.mdb"/>
-        <include name="UnityContrib*.xml"/>
-      </fileset>
-      <fileset prefix="Debug\Editor" basedir="${baseDir}\UnityContrib.UnityEditor\bin\Debug">
-        <include name="UnityContrib*.dll"/>
-        <include name="UnityContrib*.mdb"/>
-        <include name="UnityContrib*.xml"/>
-      </fileset>
-      <fileset prefix="Release" basedir="${baseDir}\UnityContrib.UnityEngine\bin\Release">
-        <include name="UnityContrib*.dll"/>
-        <include name="UnityContrib*.mdb"/>
-        <include name="UnityContrib*.xml"/>
-      </fileset>
-      <fileset prefix="Release\Editor" basedir="${baseDir}\UnityContrib.UnityEditor\bin\Release">
-        <include name="UnityContrib*.dll"/>
-        <include name="UnityContrib*.mdb"/>
-        <include name="UnityContrib*.xml"/>
-      </fileset>
-    </zip>
+		<zip comment="Version: ${custom::to-assembly-file-version(now)}" zipfile="${baseDir}/Releases/UnityContrib.${custom::to-assembly-file-version(now)}.zip" ziplevel="9">
+			<fileset prefix="Debug" basedir="${baseDir}\UnityContrib.UnityEngine\bin\Debug">
+				<include name="UnityContrib*.dll"/>
+				<include name="UnityContrib*.mdb"/>
+				<include name="UnityContrib*.xml"/>
+			</fileset>
+			<fileset prefix="Debug\Editor" basedir="${baseDir}\UnityContrib.UnityEditor\bin\Debug">
+				<include name="UnityContrib*.dll"/>
+				<include name="UnityContrib*.mdb"/>
+				<include name="UnityContrib*.xml"/>
+			</fileset>
+			<fileset prefix="Release" basedir="${baseDir}\UnityContrib.UnityEngine\bin\Release">
+				<include name="UnityContrib*.dll"/>
+				<include name="UnityContrib*.mdb"/>
+				<include name="UnityContrib*.xml"/>
+			</fileset>
+			<fileset prefix="Release\Editor" basedir="${baseDir}\UnityContrib.UnityEditor\bin\Release">
+				<include name="UnityContrib*.dll"/>
+				<include name="UnityContrib*.mdb"/>
+				<include name="UnityContrib*.xml"/>
+			</fileset>
+		</zip>
 	</target>
 
 </project>
