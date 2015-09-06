@@ -47,7 +47,19 @@ namespace UnityContrib.UnityEngine
         /// <summary>
         /// When implemented, returns the selected <see cref="T:UnityEngine.Transform"/>.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>
+        /// The selected <see cref="T:UnityEngine.Transform"/>.
+        /// </returns>
         protected abstract Transform Select();
+
+        /// <summary>
+        /// Clears the selected <see cref="T:UnityEngine.Transform"/>
+        /// so next time <see cref="P:UnityContrib.UnityEngine.BaseSelector.Selected"/>
+        /// is called the selection algorithm will reevaluate.
+        /// </summary>
+        public void Reselect()
+        {
+            this.selected = null;
+        }
     }
 }

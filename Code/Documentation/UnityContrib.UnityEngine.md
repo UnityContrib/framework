@@ -46,7 +46,11 @@ When implemented, returns the selected [UnityEngine.Transform](http://docs.unity
 
 ##### returns
 
+The selected
 
+#### Reselect
+
+Clears the selected [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) so next time UnityContrib.UnityEngine.BaseSelector.Selected is called the selection algorithm will reevaluate.
 
 ## UnityContrib.UnityEngine.BaseSelector`1
 
@@ -671,6 +675,28 @@ The array containing the elements.
 ##### returns
 
 The random element; or default value of
+
+## UnityContrib.UnityEngine.TagSelector
+
+Selects the game object having a specific tag name.
+
+### Members
+
+#### tagName
+
+The tag name of the game object to select.
+
+#### TagName
+
+Gets or sets the tag name of the game object to select.
+
+#### Select
+
+Returns the selected [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) based on the UnityContrib.UnityEngine.TagSelector.TagName .
+
+##### returns
+
+The selected
 
 ## UnityContrib.UnityEngine.TransformEx
 
