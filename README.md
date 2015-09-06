@@ -8,7 +8,7 @@ This project will replace [this](https://github.com/robintheilade/unityframework
 * Quad-tree
 * Many extension methods (see API reference for details)
 * DontDestroyOnLoad behaviour
-* Run-time tree colliders system
+* Run-time tree colliders system ([Documentation](https://github.com/UnityContrib/framework/wiki/Runtime-Tree-Colliders))
 * Selector system
 
 ## Usage
