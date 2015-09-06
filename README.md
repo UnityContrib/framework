@@ -8,6 +8,8 @@ This project will replace [this](https://github.com/robintheilade/unityframework
 * Quad-tree
 * Many extension methods (see API reference for details)
 * DontDestroyOnLoad behaviour
+* Run-time tree colliders system
+* Selector system
 
 ## Usage
 
