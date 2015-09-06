@@ -676,6 +676,100 @@ The array containing the elements.
 
 The random element; or default value of
 
+## UnityContrib.UnityEngine.RuntimeTreeColliders
+
+Positions tree colliders near the player.
+
+### Members
+
+#### diagonalLength
+
+The length of the diagonal of the square that defines the area around the player to look for trees. A high number might result in performance issues. A low number might result in trees that can be passed through.
+
+#### maxColliders
+
+The maximum number of colliders to create. A high number might result in performance issues. A low number might result in trees that can be passed through.
+
+#### player
+
+The player the colliders must follow.
+
+#### terrain
+
+A reference to the terrain component.
+
+#### data
+
+A reference to the terrain data.
+
+#### lastChangePosition
+
+The position when the colliders were last changed.
+
+#### colliders
+
+The colliders managed by this component.
+
+#### infos
+
+The tree instance info components attached to the colliders.
+
+#### trees
+
+Quadtree for fast lookup by the player's position.
+
+#### diagonalLengthOver2
+
+Half the length of diagonalLength .
+
+#### Start
+
+Caches quick references and initializes the quadtree.
+
+#### FixedUpdate
+
+Changes the colliders based on which trees the player is near.
+
+#### SetupChildColliders(UnityEngine.CapsuleCollider,UnityEngine.CapsuleCollider)
+
+Creates, updates, enables and disables child colliders.
+
+##### currentCollider
+
+The parent collider.
+
+##### prototypeCollider
+
+The prototype collider containing the child colliders to base the child colliders on.
+
+#### CopyCapsuleColliderProperties(UnityEngine.CapsuleCollider,UnityEngine.CapsuleCollider)
+
+Copies the capsule collider specific properties from one [UnityEngine.CapsuleCollider](http://docs.unity3d.com/ScriptReference/CapsuleCollider.html) to another.
+
+##### from
+
+The [UnityEngine.CapsuleCollider](http://docs.unity3d.com/ScriptReference/CapsuleCollider.html) containing the properties to copy.
+
+##### to
+
+The [UnityEngine.CapsuleCollider](http://docs.unity3d.com/ScriptReference/CapsuleCollider.html) to apply the properties to.
+
+#### AddTree(UnityEngine.TreeInstance)
+
+Adds the specified treeInstance to the collection of trees who's collider to manage.
+
+##### treeInstance
+
+The [UnityEngine.TreeInstance](http://docs.unity3d.com/ScriptReference/TreeInstance.html) to add.
+
+#### RemoveTree(UnityEngine.TreeInstance)
+
+Removes the specified treeInstance from the collection of trees who's collider to manage.
+
+##### treeInstance
+
+The [UnityEngine.TreeInstance](http://docs.unity3d.com/ScriptReference/TreeInstance.html) to remove.
+
 ## UnityContrib.UnityEngine.TagSelector
 
 Selects the game object having a specific tag name.
@@ -733,6 +827,28 @@ The other [UnityEngine.TreeInstance](http://docs.unity3d.com/ScriptReference/Tre
 ##### returns
 
 true if the state of both instances are the same; otherwise false.
+
+## UnityContrib.UnityEngine.TreeInstanceInfo
+
+Provides a reference to the tree that was collided with.
+
+### Members
+
+#### treeInstance
+
+The reference to the tree that was collided with.
+
+#### terrain
+
+The reference to the terrain the tree belongs to.
+
+#### TreePrototype
+
+Gets the prototype of the tree.
+
+#### TreeInstanceIndex
+
+Gets the index of the instance in the [UnityEngine.TerrainData.treeInstances](http://docs.unity3d.com/ScriptReference/TerrainData.treeInstances.html) array.
 
 ## UnityContrib.UnityEngine.Vector3Ex
 

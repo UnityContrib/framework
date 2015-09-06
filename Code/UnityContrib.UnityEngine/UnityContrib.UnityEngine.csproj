@@ -60,9 +60,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Quadtree.cs" />
     <Compile Include="RandomEx.cs" />
+    <Compile Include="RuntimeTreeColliders.cs" />
     <Compile Include="TagSelector.cs" />
     <Compile Include="TransformEx.cs" />
     <Compile Include="TreeInstanceEx.cs" />
+    <Compile Include="TreeInstanceInfo.cs" />
     <Compile Include="Vector3Ex.cs" />
   </ItemGroup>
   <ItemGroup>
