@@ -51,12 +51,19 @@
     <Compile Include="EditorApplicationEx.cs" />
     <Compile Include="EditorGUIEx.cs" />
     <Compile Include="EditorGUIUtilityEx.cs" />
+    <Compile Include="MassTreePlacementEditor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShaderUtilEx.cs" />
     <Compile Include="TerrainEx.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="UnityContrib Assembly.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UnityContrib.UnityEngine\UnityContrib.UnityEngine.csproj">
+      <Project>{2fe49b64-f39a-400a-8ef1-05e5384dc126}</Project>
+      <Name>UnityContrib.UnityEngine</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

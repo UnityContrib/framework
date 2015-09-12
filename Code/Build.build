@@ -120,24 +120,24 @@
 	<target name="compress" description="Compresses the assemblies">
 		<zip comment="Version: ${custom::to-assembly-file-version(now)}" zipfile="${baseDir}/Releases/UnityContrib.${custom::to-assembly-file-version(now)}.zip" ziplevel="9">
 			<fileset prefix="Debug" basedir="${baseDir}\UnityContrib.UnityEngine\bin\Debug">
-				<include name="UnityContrib*.dll"/>
-				<include name="UnityContrib*.mdb"/>
-				<include name="UnityContrib*.xml"/>
+				<include name="UnityContrib.UnityEngine.dll"/>
+				<include name="UnityContrib.UnityEngine.dll.mdb"/>
+				<include name="UnityContrib.UnityEngine.xml"/>
 			</fileset>
 			<fileset prefix="Debug\Editor" basedir="${baseDir}\UnityContrib.UnityEditor\bin\Debug">
-				<include name="UnityContrib*.dll"/>
-				<include name="UnityContrib*.mdb"/>
-				<include name="UnityContrib*.xml"/>
+				<include name="UnityContrib.UnityEditor.dll"/>
+				<include name="UnityContrib.UnityEditor.dll.mdb"/>
+				<include name="UnityContrib.UnityEditor.xml"/>
 			</fileset>
 			<fileset prefix="Release" basedir="${baseDir}\UnityContrib.UnityEngine\bin\Release">
-				<include name="UnityContrib*.dll"/>
-				<include name="UnityContrib*.mdb"/>
-				<include name="UnityContrib*.xml"/>
+				<include name="UnityContrib.UnityEngine.dll"/>
+				<include name="UnityContrib.UnityEngine.dll.mdb"/>
+				<include name="UnityContrib.UnityEngine.xml"/>
 			</fileset>
 			<fileset prefix="Release\Editor" basedir="${baseDir}\UnityContrib.UnityEditor\bin\Release">
-				<include name="UnityContrib*.dll"/>
-				<include name="UnityContrib*.mdb"/>
-				<include name="UnityContrib*.xml"/>
+				<include name="UnityContrib.UnityEditor.dll"/>
+				<include name="UnityContrib.UnityEditor.dll.mdb"/>
+				<include name="UnityContrib.UnityEditor.xml"/>
 			</fileset>
 		</zip>
 	</target>

@@ -158,7 +158,31 @@ The end of the path.
 
 ##### color
 
-The color of the line.
+The color of the path.
+
+##### duration
+
+The amount of seconds the path must be visible for. A duration of zero shows the path for just one frame.
+
+##### depthTest
+
+A value indicating whether or not the path be obscured by objects closer to the camera?
+
+#### DrawSphere(UnityEngine.Vector3,System.Single,UnityEngine.Color,System.Single,System.Boolean)
+
+Draws a sphere at the specified position .
+
+##### position
+
+The position to draw the sphere at.
+
+##### radius
+
+The radius of the sphere.
+
+##### color
+
+The color of the sphere.
 
 ##### duration
 
@@ -399,6 +423,52 @@ The style to use for background image and padding values. If left out, the backg
 ##### options
 
 An optional list of layout options that specify extra layouting properties. Any values passed in here will override settings defined by the style.
+
+## UnityContrib.UnityEngine.MassTreePlacement
+
+Values for placing random trees.
+
+### Members
+
+#### count
+
+The number of trees to place.
+
+#### minWorldY
+
+The lowest point to position a tree.
+
+#### maxWorldY
+
+The highest point to position a tree.
+
+#### minSlope
+
+The minimum allowed slope of the ground to position a tree.
+
+#### maxSlope
+
+The maximum allowed slope of the ground to position a tree.
+
+#### minWidthScale
+
+The minimum value to scale the width of a tree.
+
+#### maxWidthScale
+
+The maximum value to scale the width of a tree.
+
+#### minHeightScale
+
+The minimum value to scale the height of a tree.
+
+#### maxHeightScale
+
+The maximum value to scale the height of a tree.
+
+#### maxTime
+
+The maximum number of seconds for the placement process to take. The process is aborted if it takes any longer.
 
 ## UnityContrib.UnityEngine.Measure
 

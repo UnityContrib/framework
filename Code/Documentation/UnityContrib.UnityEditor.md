@@ -112,6 +112,48 @@ The name of the builtin resource.
 
 The builtin text resource.
 
+## UnityContrib.UnityEditor.MassTreePlacementEditor
+
+Places random trees on a terrain.
+
+### Members
+
+#### terrainDataType
+
+Reference to the [UnityEngine.TerrainData](http://docs.unity3d.com/ScriptReference/TerrainData.html) type for later invocation using reflection.
+
+#### OnInspectorGUI
+
+Draws the "Place" and "Clear" buttons.
+
+#### Clear(UnityEngine.Terrain)
+
+Clears the terrain of all trees.
+
+##### terrain
+
+The terrain who's trees to remove.
+
+#### PlaceRandomTrees(UnityEngine.Terrain,UnityContrib.UnityEngine.MassTreePlacement)
+
+Places random trees on the terrain.
+
+##### terrain
+
+The terrain to place trees on.
+
+##### mtp
+
+The settings for the tree placement.
+
+#### RecalculateTreePositions(UnityEngine.TerrainData)
+
+Invokes [UnityEngine.TerrainData.RecalculateTreePositions](http://docs.unity3d.com/ScriptReference/TerrainData.RecalculateTreePositions.html) using reflection.
+
+##### data
+
+The instance to invoke the method on.
+
 ## UnityContrib.UnityEditor.ShaderUtilEx
 
 Provides a set of helper methods for working with the [UnityEngine.Shader](http://docs.unity3d.com/ScriptReference/Shader.html) class.

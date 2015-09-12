@@ -54,6 +54,7 @@
     <Compile Include="GUIEx.ScrollView.cs" />
     <Compile Include="GUILayoutEx.Horizontal.cs" />
     <Compile Include="GUILayoutEx.Vertical.cs" />
+    <Compile Include="MassTreePlacement.cs" />
     <Compile Include="Measure.cs" />
     <Compile Include="NavMeshAgentEx.cs" />
     <Compile Include="NavMeshPathEx.cs" />

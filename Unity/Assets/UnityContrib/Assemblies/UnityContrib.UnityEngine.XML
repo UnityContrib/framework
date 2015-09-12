@@ -1,0 +1,984 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UnityContrib.UnityEngine</name>
+    </assembly>
+    <members>
+        <member name="T:UnityContrib.UnityEngine.ArrayEx">
+            <summary>
+            Provides a set of helper methods for working with the <see cref="T:System.Array"/> class.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.ArrayEx.IsNullOrEmpty(System.Array)">
+            <summary>
+            Returns a value indicating if the specified <paramref name="array"/> is null or is empty.
+            </summary>
+            <param name="array">
+            The array to evaluate.
+            </param>
+            <returns>
+            true if the array is null or empty; otherwise false.
+            </returns>
+        </member>
+        <member name="T:UnityContrib.UnityEngine.BaseSelector">
+            <summary>
+            Base implementation for selectors.
+            
+            A selector is a component that selects a <see cref="T:UnityEngine.Transform"/>.
+            The advantage of using this component is that you don't need to write the same find game object code over and over.
+            You can simply attach an instance of a selector to a game object and let that instance find the <see cref="T:UnityEngine.Transform"/> for you.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.BaseSelector.selected">
+            <summary>
+            The cached reference to the selected <see cref="T:UnityEngine.Transform"/>.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.BaseSelector.Selected">
+            <summary>
+            Gets the selected <see cref="T:UnityEngine.Transform"/>.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.BaseSelector.op_Implicit(UnityContrib.UnityEngine.BaseSelector)~UnityEngine.Transform">
+            <summary>
+            Returns the selected <see cref="T:UnityEngine.Transform"/>.
+            </summary>
+            <param name="selector">
+            The selector that selects the <see cref="T:UnityEngine.Transform"/>.
+            </param>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.BaseSelector.Select">
+            <summary>
+            When implemented, returns the selected <see cref="T:UnityEngine.Transform"/>.
+            </summary>
+            <returns>
+            The selected <see cref="T:UnityEngine.Transform"/>.
+            </returns>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.BaseSelector.Reselect">
+            <summary>
+            Clears the selected <see cref="T:UnityEngine.Transform"/>
+            so next time <see cref="P:UnityContrib.UnityEngine.BaseSelector.Selected"/>
+            is called the selection algorithm will reevaluate.
+            </summary>
+        </member>
+        <member name="T:UnityContrib.UnityEngine.BaseSelector`1">
+            <summary>
+            Generic base implementation for selectors that selects <see cref="T:UnityEngine.Component"/>.
+            
+            A selector is a component that selects a <see cref="T:UnityEngine.Transform"/>.
+            The advantage of using this component is that you don't need to write the same find game object code over and over.
+            You can simply attach an instance of a selector to a game object and let that instance find the <see cref="T:UnityEngine.Transform"/> for you.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.BaseSelector`1.Select">
+            <summary>
+            Returns the <see cref="T:UnityEngine.Transform"/> containing the <typeparamref name="TComponent"/> component.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UnityContrib.UnityEngine.BehaviourEx">
+            <summary>
+            Provides a set of helper methods for working with the <see cref="T:UnityEngine.Behaviour"/> class.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.BehaviourEx.DisableIfNull``1(``0,UnityEngine.Behaviour,System.String)">
+            <summary>
+            Disables the behaviour if the specified <paramref name="value"/> is null.
+            </summary>
+            <param name="value">
+            The value to null test.
+            </param>
+            <param name="behaviour">
+            The behaviour to disable.
+            </param>
+            <param name="variableName">
+            The name of the value variable used in the warning message.
+            </param>
+        </member>
+        <member name="T:UnityContrib.UnityEngine.Color32Ex">
+            <summary>
+            Provides a set of helper methods for working with the <see cref="T:UnityEngine.Color32"/> struct.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.Color32Ex.Equals(UnityEngine.Color32,UnityEngine.Color32)">
+            <summary>
+            Returns a value indicating whether or not the specified <see cref="T:UnityEngine.Color32"/> are equal.
+            </summary>
+            <param name="value">
+            The left side <see cref="T:UnityEngine.Color32"/> of the comparison.
+            </param>
+            <param name="other">
+            The right side <see cref="T:UnityEngine.Color32"/> of the comparison.
+            </param>
+            <returns>
+            true if equal; otherwise false.
+            </returns>
+        </member>
+        <member name="T:UnityContrib.UnityEngine.DebugEx">
+            <summary>
+            Provides a set of helper methods for debugging.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.DebugEx.DrawCross3D(UnityEngine.Vector3,System.Single,UnityEngine.Color,System.Single,System.Boolean)">
+            <summary>
+            Draws 3 lines intersecting each other at the specified <paramref name="position"/>.
+            </summary>
+            <param name="position">
+            The position where the 3 lines intersect.
+            </param>
+            <param name="size">
+            The length of each line.
+            </param>
+            <param name="color">
+            The color of the lines.
+            </param>
+            <param name="duration">
+            The amount of seconds the line must be visible for.
+            A duration of zero shows the line for just one frame.
+            </param>
+            <param name="depthTest">
+            A value indicating whether or not the line be obscured by objects closer to the camera?
+            </param>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.DebugEx.DrawPath(UnityEngine.NavMeshPath,UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color,System.Single,System.Boolean)">
+            <summary>
+            Draws the specified <paramref name="path"/>.
+            </summary>
+            <param name="path">
+            The path to draw.
+            </param>
+            <param name="start">
+            The start of the path.
+            </param>
+            <param name="end">
+            The end of the path.
+            </param>
+            <param name="color">
+            The color of the path.
+            </param>
+            <param name="duration">
+            The amount of seconds the path must be visible for.
+            A duration of zero shows the path for just one frame.
+            </param>
+            <param name="depthTest">
+            A value indicating whether or not the path be obscured by objects closer to the camera?
+            </param>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.DebugEx.DrawSphere(UnityEngine.Vector3,System.Single,UnityEngine.Color,System.Single,System.Boolean)">
+            <summary>
+            Draws a sphere at the specified <paramref name="position"/>.
+            </summary>
+            <param name="position">
+            The position to draw the sphere at.
+            </param>
+            <param name="radius">
+            The radius of the sphere.
+            </param>
+            <param name="color">
+            The color of the sphere.
+            </param>
+            <param name="duration">
+            The amount of seconds the line must be visible for.
+            A duration of zero shows the line for just one frame.
+            </param>
+            <param name="depthTest">
+            A value indicating whether or not the line be obscured by objects closer to the camera?
+            </param>
+        </member>
+        <member name="T:UnityContrib.UnityEngine.DontDestroyOnLoad">
+            <summary>
+            Component that tells the engine not to unload the game object when scene changes.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.DontDestroyOnLoad.Awake">
+            <summary>
+            Informs the engine not to unload the game object.
+            </summary>
+        </member>
+        <member name="T:UnityContrib.UnityEngine.GUIEx">
+            <summary>
+            Provides helper methods for working with the <see cref="T:UnityEngine.GUI"/> class.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.GUIEx.ScrollView(UnityEngine.Rect,UnityEngine.Vector2,UnityEngine.Rect,UnityEngine.GUIStyle,UnityEngine.GUIStyle,System.Action)">
+            <summary>
+            Begin a scrolling view inside your GUI.
+            
+            ScrollViews let you make a smaller area on-screen look 'into' a much larger area, using scrollbars placed on the sides of the ScrollView.
+            </summary>
+            <param name="rect">
+            Rectangle on the screen to use for the ScrollView.
+            </param>
+            <param name="scrollPosition">
+            The pixel distance that the view is scrolled in the X and Y directions.
+            </param>
+            <param name="viewRect">
+            The rectangle used inside the scrollview.
+            </param>
+            <param name="horizontalScrollbar">
+            GUIStyle to use for the horizontal scrollbar. If left out, the horizontalScrollbar style from the current GUISkin is used.
+            </param>
+            <param name="verticalScrollbar">
+            GUIStyle to use for the vertical scrollbar. If left out, the verticalScrollbar style from the current GUISkin is used.
+            </param>
+            <param name="action">
+            The callback that renders the controls.
+            </param>
+            <returns>
+            The modified scrollPosition. Feed this back into the variable you pass in.
+            </returns>
+        </member>
+        <member name="T:UnityContrib.UnityEngine.GUILayoutEx">
+            <summary>
+            Provides helper methods for working with the <see cref="T:UnityEngine.GUILayout"/> class.
+            </summary>
+            <summary>
+            Provides helper methods for working with the <see cref="T:UnityEngine.GUILayout"/> class.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.GUILayoutEx.Horizontal(System.Action,UnityEngine.GUILayoutOption[])">
+            <summary>
+            All controls rendered inside this method will be placed horizontically below each other.
+            </summary>
+            <param name="action">
+            The callback that renders the controls.
+            </param>
+            <param name="options">
+            An optional list of layout options that specify extra layouting properties. Any values passed in here will override settings defined by the style.
+            </param>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.GUILayoutEx.Horizontal(System.Action,UnityEngine.GUIStyle,UnityEngine.GUILayoutOption[])">
+            <summary>
+            All controls rendered inside this method will be placed horizontically below each other.
+            </summary>
+            <param name="action">
+            The callback that renders the controls.
+            </param>
+            <param name="style">
+            The style to use for background image and padding values. If left out, the background is transparent.
+            </param>
+            <param name="options">
+            An optional list of layout options that specify extra layouting properties. Any values passed in here will override settings defined by the style.
+            </param>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.GUILayoutEx.Horizontal(System.Action,UnityEngine.GUIContent,UnityEngine.GUIStyle,UnityEngine.GUILayoutOption[])">
+            <summary>
+            All controls rendered inside this method will be placed horizontically below each other.
+            </summary>
+            <param name="action">
+            The callback that renders the controls.
+            </param>
+            <param name="content">
+            The text, image, and tooltip for this group.
+            </param>
+            <param name="style">
+            The style to use for background image and padding values. If left out, the background is transparent.
+            </param>
+            <param name="options">
+            An optional list of layout options that specify extra layouting properties. Any values passed in here will override settings defined by the style.
+            </param>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.GUILayoutEx.Horizontal(System.Action,System.String,UnityEngine.GUIStyle,UnityEngine.GUILayoutOption[])">
+            <summary>
+            All controls rendered inside this method will be placed horizontically below each other.
+            </summary>
+            <param name="action">
+            The callback that renders the controls.
+            </param>
+            <param name="text">
+            The text to display on group.
+            </param>
+            <param name="style">
+            The style to use for background image and padding values. If left out, the background is transparent.
+            </param>
+            <param name="options">
+            An optional list of layout options that specify extra layouting properties. Any values passed in here will override settings defined by the style.
+            </param>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.GUILayoutEx.Horizontal(System.Action,UnityEngine.Texture2D,UnityEngine.GUIStyle,UnityEngine.GUILayoutOption[])">
+            <summary>
+            All controls rendered inside this method will be placed horizontically below each other.
+            </summary>
+            <param name="action">
+            The callback that renders the controls.
+            </param>
+            <param name="image">
+            The texture to display on group.
+            </param>
+            <param name="style">
+            The style to use for background image and padding values. If left out, the background is transparent.
+            </param>
+            <param name="options">
+            An optional list of layout options that specify extra layouting properties. Any values passed in here will override settings defined by the style.
+            </param>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.GUILayoutEx.Vertical(System.Action,UnityEngine.GUILayoutOption[])">
+            <summary>
+            All controls rendered inside this method will be placed vertically below each other.
+            </summary>
+            <param name="action">
+            The callback that renders the controls.
+            </param>
+            <param name="options">
+            An optional list of layout options that specify extra layouting properties. Any values passed in here will override settings defined by the style.
+            </param>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.GUILayoutEx.Vertical(System.Action,UnityEngine.GUIStyle,UnityEngine.GUILayoutOption[])">
+            <summary>
+            All controls rendered inside this method will be placed vertically below each other.
+            </summary>
+            <param name="action">
+            The callback that renders the controls.
+            </param>
+            <param name="style">
+            The style to use for background image and padding values. If left out, the background is transparent.
+            </param>
+            <param name="options">
+            An optional list of layout options that specify extra layouting properties. Any values passed in here will override settings defined by the style.
+            </param>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.GUILayoutEx.Vertical(System.Action,UnityEngine.GUIContent,UnityEngine.GUIStyle,UnityEngine.GUILayoutOption[])">
+            <summary>
+            All controls rendered inside this method will be placed vertically below each other.
+            </summary>
+            <param name="action">
+            The callback that renders the controls.
+            </param>
+            <param name="content">
+            The text, image, and tooltip for this group.
+            </param>
+            <param name="style">
+            The style to use for background image and padding values. If left out, the background is transparent.
+            </param>
+            <param name="options">
+            An optional list of layout options that specify extra layouting properties. Any values passed in here will override settings defined by the style.
+            </param>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.GUILayoutEx.Vertical(System.Action,System.String,UnityEngine.GUIStyle,UnityEngine.GUILayoutOption[])">
+            <summary>
+            All controls rendered inside this method will be placed vertically below each other.
+            </summary>
+            <param name="action">
+            The callback that renders the controls.
+            </param>
+            <param name="text">
+            The text to display on group.
+            </param>
+            <param name="style">
+            The style to use for background image and padding values. If left out, the background is transparent.
+            </param>
+            <param name="options">
+            An optional list of layout options that specify extra layouting properties. Any values passed in here will override settings defined by the style.
+            </param>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.GUILayoutEx.Vertical(System.Action,UnityEngine.Texture2D,UnityEngine.GUIStyle,UnityEngine.GUILayoutOption[])">
+            <summary>
+            All controls rendered inside this method will be placed vertically below each other.
+            </summary>
+            <param name="action">
+            The callback that renders the controls.
+            </param>
+            <param name="image">
+            The texture to display on group.
+            </param>
+            <param name="style">
+            The style to use for background image and padding values. If left out, the background is transparent.
+            </param>
+            <param name="options">
+            An optional list of layout options that specify extra layouting properties. Any values passed in here will override settings defined by the style.
+            </param>
+        </member>
+        <member name="T:UnityContrib.UnityEngine.MassTreePlacement">
+            <summary>
+            Values for placing random trees.
+            </summary>
+            <remarks>
+            <see cref="T:UnityContrib.UnityEditor.MassTreePlacementEditor"/> does the actual work.
+            </remarks>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.MassTreePlacement.count">
+            <summary>
+            The number of trees to place.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.MassTreePlacement.minWorldY">
+            <summary>
+            The lowest point to position a tree.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.MassTreePlacement.maxWorldY">
+            <summary>
+            The highest point to position a tree.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.MassTreePlacement.minSlope">
+            <summary>
+            The minimum allowed slope of the ground to position a tree.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.MassTreePlacement.maxSlope">
+            <summary>
+            The maximum allowed slope of the ground to position a tree.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.MassTreePlacement.minWidthScale">
+            <summary>
+            The minimum value to scale the width of a tree.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.MassTreePlacement.maxWidthScale">
+            <summary>
+            The maximum value to scale the width of a tree.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.MassTreePlacement.minHeightScale">
+            <summary>
+            The minimum value to scale the height of a tree.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.MassTreePlacement.maxHeightScale">
+            <summary>
+            The maximum value to scale the height of a tree.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.MassTreePlacement.maxTime">
+            <summary>
+            The maximum number of seconds for the placement process to take.
+            The process is aborted if it takes any longer.
+            </summary>
+        </member>
+        <member name="T:UnityContrib.UnityEngine.Measure">
+            <summary>
+            Provides methods for doing measurements of code execution.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.Measure.Time(System.Action)">
+            <summary>
+            Measures the time the specified <paramref name="action"/> takes to execute.
+            </summary>
+            <param name="action">
+            The action to measure.
+            </param>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.Measure.DebugLogTime(System.String,System.Action)">
+            <summary>
+            Measures the time the specified <paramref name="action"/> takes to execute.
+            </summary>
+            <param name="caption">
+            The caption of the measurement.
+            </param>
+            <param name="action">
+            The action to measure.
+            </param>
+        </member>
+        <member name="T:UnityContrib.UnityEngine.NavMeshAgentEx">
+            <summary>
+            Provides a set of helper methods for working with the <see cref="T:UnityEngine.NavMeshAgent"/> class.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.NavMeshAgentEx.IsNavigating(UnityEngine.NavMeshAgent)">
+            <summary>
+            Returns a value indicating whether or not the specified <paramref name="agent"/> is planning or following a path.
+            </summary>
+            <param name="agent">
+            The agent to query.
+            </param>
+            <returns>
+            true if the agent is planning or following a path; otherwise false.
+            </returns>
+        </member>
+        <member name="T:UnityContrib.UnityEngine.NavMeshPathEx">
+            <summary>
+            Provides a set of helper methods for working with the <see cref="T:UnityEngine.NavMeshPath"/> class.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.NavMeshPathEx.Distance(UnityEngine.NavMeshPath,UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>
+            Calculates the distance between the specified <paramref name="start"/> and <paramref name="end"/> using the specified <paramref name="path"/>.
+            </summary>
+            <param name="path">
+            The path who's distance to calculate.
+            </param>
+            <param name="start">
+            The start of the path.
+            </param>
+            <param name="end">
+            The end of the path.
+            </param>
+            <returns>
+            The distance from start to end measured in Unity units.
+            </returns>
+        </member>
+        <member name="T:UnityContrib.UnityEngine.Quadtree`1">
+            <summary>
+            A region quadtree implementation used for fast lookup in a two dimensional world.
+            </summary>
+            <typeparam name="T">
+            The type to store inside the tree.
+            </typeparam>
+            <remarks>
+            This implementation is not thread-safe.
+            </remarks>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.Quadtree`1.nodeCapacity">
+            <summary>
+            The maximum number of nodes per tree.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.Quadtree`1.nodes">
+            <summary>
+            The nodes inside this region.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.Quadtree`1.children">
+            <summary>
+            The child trees inside this region.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.Quadtree`1.boundaries">
+            <summary>
+            The boundaries of this region.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.Quadtree`1.Count">
+            <summary>
+            Gets the number of values inside this tree.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.Quadtree`1.#ctor(UnityEngine.Rect,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Quadtree`1"/> class.
+            </summary>
+            <param name="boundaries">
+            The boundaries of the region.
+            </param>
+            <param name="nodeCapacity">
+            The maximum number of nodes per tree.
+            If the amount of nodes exceeds the tree will be subdivided into 4 sub trees.
+            A value of 32 seems fine in terms of insert and remove speed.
+            A value greater than 32 improves insert speed but slows down remove speed.
+            </param>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.Quadtree`1.Insert(System.Single,System.Single,`0)">
+            <summary>
+            Inserts a value into the region.
+            </summary>
+            <param name="x">
+            The X component of the value's position.
+            </param>
+            <param name="y">
+            The y component of the value's position.
+            </param>
+            <param name="value">
+            The value to insert.
+            </param>
+            <returns>
+            true if the value was inserted into the region;
+            false if the value's position was outside the region.
+            </returns>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.Quadtree`1.Insert(UnityEngine.Vector2,`0)">
+            <summary>
+            Inserts a value into the region.
+            </summary>
+            <param name="position">
+            The position of the value.
+            </param>
+            <param name="value">
+            The value to insert.
+            </param>
+            <returns>
+            true if the value was inserted into the region;
+            false if the value's position was outside the region.
+            </returns>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.Quadtree`1.Insert(UnityContrib.UnityEngine.Quadtree{`0}.QuadtreeNode)">
+            <summary>
+            Inserts a node into the region.
+            </summary>
+            <param name="node">
+            The node to insert.
+            </param>
+            <returns>
+            true if the node was inserted into the region;
+            false if the position of the node was outside the region.
+            </returns>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.Quadtree`1.Find(UnityEngine.Rect)">
+            <summary>
+            Returns the values that are within the specified <paramref name="range"/>.
+            </summary>
+            <param name="range">
+            A rectangle representing the region to query.
+            </param>
+            <returns>
+            Any value found inside the specified <paramref name="range"/>.
+            </returns>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.Quadtree`1.Remove(System.Single,System.Single,`0)">
+            <summary>
+            Removes a value from the region.
+            </summary>
+            <param name="x">
+            The X component of the value's position.
+            </param>
+            <param name="z">
+            The Z component of the value's position.
+            </param>
+            <param name="value">
+            The value to remove.
+            </param>
+            <returns>
+            true if the value was removed from the region;
+            false if the value's position was outside the region.
+            </returns>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.Quadtree`1.Remove(UnityEngine.Vector2,`0)">
+            <summary>
+            Removes a value from the region.
+            </summary>
+            <param name="position">
+            The position of the value.
+            </param>
+            <param name="value">
+            The value to remove.
+            </param>
+            <returns>
+            true if the value was removed from the region;
+            false if the value's position was outside the region.
+            </returns>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.Quadtree`1.Subdivide">
+            <summary>
+            Splits the region into 4 new subregions and moves the existing values into the new subregions.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.Quadtree`1.Combine">
+            <summary>
+            Joins the contents of the children into this region and remove the child regions.
+            </summary>
+        </member>
+        <member name="T:UnityContrib.UnityEngine.Quadtree`1.QuadtreeNode">
+            <summary>
+            A single node inside a quadtree used for keeping values and their position.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.Quadtree`1.QuadtreeNode.Position">
+            <summary>
+            Gets the position of the value.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.Quadtree`1.QuadtreeNode.Value">
+            <summary>
+            Gets the value.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.Quadtree`1.QuadtreeNode.#ctor(UnityEngine.Vector2,`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:QuadtreeNode"/> class.
+            </summary>
+            <param name="position">
+            The position of the value.
+            </param>
+            <param name="value">
+            The value.
+            </param>
+        </member>
+        <member name="T:UnityContrib.UnityEngine.RandomEx">
+            <summary>
+            Provides a set of helper methods for working with random values.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.RandomEx.Vector3XZ">
+            <summary>
+            Returns a random point inside a circle with a radius of 1.
+            The Y component is always 0.0.
+            </summary>
+            <returns>
+            The random vector.
+            </returns>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.RandomEx.Vector3XZ(System.Single)">
+            <summary>
+            Returns a random point inside a circle.
+            The Y component is always 0.0.
+            </summary>
+            <param name="distance">
+            This distance from the center of the circle to the point.
+            </param>
+            <returns>
+            The random vector.
+            </returns>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.RandomEx.Random``1(``0[])">
+            <summary>
+            Returns random element from the specified <paramref name="array"/>.
+            </summary>
+            <typeparam name="T">
+            The type of the elements in the array.
+            </typeparam>
+            <param name="array">
+            The array containing the elements.
+            </param>
+            <returns>
+            The random element; or default value of <typeparamref name="T"/> if array is null or empty.
+            </returns>
+        </member>
+        <member name="T:UnityContrib.UnityEngine.RuntimeTreeColliders">
+            <summary>
+            Positions tree colliders near the player.
+            </summary>
+            <remarks>
+            The trees used on the terrain must contain a capsule collider defining the tree trunk.
+            The player is found using the "Player" tag.
+            The colliders are parented to the terrain in the hierarchy.
+            </remarks>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.RuntimeTreeColliders.diagonalLength">
+            <summary>
+            The length of the diagonal of the square that defines the area around the player to look for trees.
+            A high number might result in performance issues.
+            A low number might result in trees that can be passed through.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.RuntimeTreeColliders.maxColliders">
+            <summary>
+            The maximum number of colliders to create.
+            A high number might result in performance issues.
+            A low number might result in trees that can be passed through.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.RuntimeTreeColliders.player">
+            <summary>
+            The player the colliders must follow.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.RuntimeTreeColliders.terrain">
+            <summary>
+            A reference to the terrain component.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.RuntimeTreeColliders.data">
+            <summary>
+            A reference to the terrain data.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.RuntimeTreeColliders.lastChangePosition">
+            <summary>
+            The position when the colliders were last changed.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.RuntimeTreeColliders.colliders">
+            <summary>
+            The colliders managed by this component.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.RuntimeTreeColliders.infos">
+            <summary>
+            The tree instance info components attached to the colliders.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.RuntimeTreeColliders.trees">
+            <summary>
+            Quadtree for fast lookup by the player's position.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.RuntimeTreeColliders.diagonalLengthOver2">
+            <summary>
+            Half the length of <see cref="F:diagonalLength"/>.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.RuntimeTreeColliders.Start">
+            <summary>
+            Caches quick references and initializes the quadtree.
+            </summary>
+            <remarks>
+            This method is invoked by Unity.
+            </remarks>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.RuntimeTreeColliders.FixedUpdate">
+            <summary>
+            Changes the colliders based on which trees the player is near.
+            </summary>
+            <remarks>
+            This method is invoked by Unity.
+            </remarks>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.RuntimeTreeColliders.SetupChildColliders(UnityEngine.CapsuleCollider,UnityEngine.CapsuleCollider)">
+            <summary>
+            Creates, updates, enables and disables child colliders.
+            </summary>
+            <param name="currentCollider">
+            The parent collider.
+            </param>
+            <param name="prototypeCollider">
+            The prototype collider containing the child colliders to base the child colliders on.
+            </param>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.RuntimeTreeColliders.CopyCapsuleColliderProperties(UnityEngine.CapsuleCollider,UnityEngine.CapsuleCollider)">
+            <summary>
+            Copies the capsule collider specific properties from one <see cref="T:UnityEngine.CapsuleCollider"/> to another.
+            </summary>
+            <param name="from">
+            The <see cref="T:UnityEngine.CapsuleCollider"/> containing the properties to copy.
+            </param>
+            <param name="to">
+            The <see cref="T:UnityEngine.CapsuleCollider"/> to apply the properties to.
+            </param>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.RuntimeTreeColliders.AddTree(UnityEngine.TreeInstance)">
+            <summary>
+            Adds the specified <paramref name="treeInstance"/>
+            to the collection of trees who's collider to manage.
+            </summary>
+            <param name="treeInstance">
+            The <see cref="T:UnityEngine.TreeInstance"/> to add.
+            </param>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.RuntimeTreeColliders.RemoveTree(UnityEngine.TreeInstance)">
+            <summary>
+            Removes the specified <paramref name="treeInstance"/>
+            from the collection of trees who's collider to manage.
+            </summary>
+            <param name="treeInstance">
+            The <see cref="T:UnityEngine.TreeInstance"/> to remove.
+            </param>
+        </member>
+        <member name="T:UnityContrib.UnityEngine.TagSelector">
+            <summary>
+            Selects the game object having a specific tag name.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.TagSelector.tagName">
+            <summary>
+            The tag name of the game object to select.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.TagSelector.TagName">
+            <summary>
+            Gets or sets the tag name of the game object to select.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.TagSelector.Select">
+            <summary>
+            Returns the selected <see cref="T:UnityEngine.Transform"/> based on the <see cref="P:UnityContrib.UnityEngine.TagSelector.TagName"/>.
+            </summary>
+            <returns>
+            The selected <see cref="T:UnityEngine.Transform"/>.
+            </returns>
+        </member>
+        <member name="T:UnityContrib.UnityEngine.TransformEx">
+            <summary>
+            Provides helper methods for working with the <see cref="T:UnityEngine.Transform"/> class.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.TransformEx.DestroyAllChildren(UnityEngine.Transform)">
+            <summary>
+            Destroys all the children of the specified <paramref name="parent"/> <see cref="T:UnityEngine.Transform"/>.
+            </summary>
+            <param name="parent">
+            The parent <see cref="T:UnityEngine.Transform"/> who's children to destroy.
+            </param>
+        </member>
+        <member name="T:UnityContrib.UnityEngine.TreeInstanceEx">
+            <summary>
+            Provides a set of helper methods for working with the <see cref="T:UnityEngine.TreeInstance"/> class.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.TreeInstanceEx.Same(UnityEngine.TreeInstance,UnityEngine.TreeInstance)">
+            <summary>
+            Compares two instances of <see cref="T:UnityEngine.TreeInstance"/>.
+            </summary>
+            <param name="instance1">
+            One of the <see cref="T:UnityEngine.TreeInstance"/>.
+            </param>
+            <param name="instance2">
+            The other <see cref="T:UnityEngine.TreeInstance"/>.
+            </param>
+            <returns>
+            true if the state of both instances are the same; otherwise false.
+            </returns>
+        </member>
+        <member name="T:UnityContrib.UnityEngine.TreeInstanceInfo">
+            <summary>
+            Provides a reference to the tree that was collided with.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.TreeInstanceInfo.treeInstance">
+            <summary>
+            The reference to the tree that was collided with.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.TreeInstanceInfo.terrain">
+            <summary>
+            The reference to the terrain the tree belongs to.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.TreeInstanceInfo.TreePrototype">
+            <summary>
+            Gets the prototype of the tree.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.TreeInstanceInfo.TreeInstanceIndex">
+            <summary>
+            Gets the index of the instance in the <see cref="F:UnityEngine.TerrainData.treeInstances"/> array.
+            </summary>
+        </member>
+        <member name="T:UnityContrib.UnityEngine.Vector3Ex">
+            <summary>
+            Provides a set of helper methods for working with the <see cref="T:UnityEngine.Vector3"/> struct.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.Vector3Ex.Around(UnityEngine.Vector3,System.Single)">
+            <summary>
+            Returns a random position around the specified center <paramref name="position"/>.
+            
+            The Y component of the random position will always be the same as the center position.
+            </summary>
+            <param name="position">
+            The center position to generate a random position around.
+            </param>
+            <param name="distance">
+            The distance from the center position to the generated random position.
+            </param>
+            <returns>
+            The generated random position.
+            </returns>
+            <example>
+            public void Example()
+            {
+                var center = Vector3(100.0f, 100.0f, 100.0f);
+                var around = center.Around(20.0f);
+            }
+            </example>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.Vector3Ex.Within(UnityEngine.Vector3,System.Single,System.Single,System.Single)">
+            <summary>
+            Returns a random position inside a box.
+            </summary>
+            <param name="position">
+            The center of the box.
+            </param>
+            <param name="x">
+            The width of the box.
+            </param>
+            <param name="y">
+            The height of the box.
+            </param>
+            <param name="z">
+            The depth of the box.
+            </param>
+            <returns>
+            The random position inside the box.
+            </returns>
+            <example>
+            public void Example()
+            {
+                var center = Vector3(100.0f, 100.0f, 100.0f);
+                var within = center.Within(20.0f, 30.0f, 40.0f);
+            }
+            </example>
+        </member>
+    </members>
+</doc>
