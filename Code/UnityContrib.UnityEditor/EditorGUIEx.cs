@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using UnityEditor;
 using UnityEngine;
 
 namespace UnityContrib.UnityEditor
@@ -25,6 +23,30 @@ namespace UnityContrib.UnityEditor
             GUI.color = color;
             GUI.DrawTexture(rect, global::UnityEditor.EditorGUIUtility.whiteTexture);
             GUI.color = Color.white;
+        }
+
+        /// <summary>
+        /// Check if any control was changed inside a block of code.
+        /// </summary>
+        /// <param name="content">
+        /// The callback to invoke between start and end change check.
+        /// </param>
+        /// <returns>
+        /// true if changed; otherwise false.
+        /// </returns>
+        public static bool ChangeCheck(Action content)
+        {
+            var hasChange = false;
+            EditorGUI.BeginChangeCheck();
+            try
+            {
+                content();
+            }
+            finally
+            {
+                hasChange = EditorGUI.EndChangeCheck();
+            }
+            return hasChange;
         }
     }
 }

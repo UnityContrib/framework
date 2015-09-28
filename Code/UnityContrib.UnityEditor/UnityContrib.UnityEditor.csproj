@@ -52,6 +52,7 @@
     <Compile Include="EditorGUIEx.cs" />
     <Compile Include="EditorGUIUtilityEx.cs" />
     <Compile Include="MassTreePlacementEditor.cs" />
+    <Compile Include="MultilineWithWordWrapPropertyDrawer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShaderUtilEx.cs" />
     <Compile Include="TerrainEx.cs" />

@@ -77,13 +77,13 @@ namespace UnityContrib.UnityEditor
 
             var start = DateTime.Now;
 
-            var array = new TreeInstance[mtp.count];
+            var array = new TreeInstance[mtp.Count];
             var i = 0;
             while (i < array.Length)
             {
                 // stop if process have run for over X seconds
                 var delta = DateTime.Now - start;
-                if (delta.TotalSeconds >= mtp.maxTime)
+                if (delta.TotalSeconds >= mtp.MaxTime)
                 {
                     Debug.LogWarning("Process was taking too much time to run");
                     return;
@@ -94,14 +94,14 @@ namespace UnityContrib.UnityEditor
                 // don't allow placement of trees below minWorldY and above maxWorldY
                 var y = data.GetInterpolatedHeight(position.x, position.z);
                 var worldY = y + terrain.transform.position.y;
-                if (worldY < mtp.minWorldY || worldY > mtp.maxWorldY)
+                if (worldY < mtp.MinWorldY || worldY > mtp.MaxWorldY)
                 {
                     continue;
                 }
 
                 // don't allow placement of trees on surfaces flatter than minSlope and steeper than maxSlope
                 var steepness = data.GetSteepness(position.x, position.z);
-                if (steepness < mtp.minSlope || steepness > mtp.maxSlope)
+                if (steepness < mtp.MinSlope || steepness > mtp.MaxSlope)
                 {
                     continue;
                 }
@@ -114,8 +114,8 @@ namespace UnityContrib.UnityEditor
                 treeInstance.color = color;
                 treeInstance.lightmapColor = Color.white;
                 treeInstance.prototypeIndex = Random.Range(0, num);
-                treeInstance.widthScale = Random.Range(mtp.minWidthScale, mtp.maxWidthScale);
-                treeInstance.heightScale = Random.Range(mtp.minHeightScale, mtp.maxHeightScale);
+                treeInstance.widthScale = Random.Range(mtp.MinWidthScale, mtp.MaxWidthScale);
+                treeInstance.heightScale = Random.Range(mtp.MinHeightScale, mtp.MaxHeightScale);
                 array[i] = treeInstance;
                 i++;
             }

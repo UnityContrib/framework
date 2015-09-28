@@ -18,6 +18,22 @@ The array to evaluate.
 
 true if the array is null or empty; otherwise false.
 
+#### Swap``1(``0[],System.Int32,System.Int32)
+
+Swaps the elements at indicies i1 and i2 .
+
+##### source
+
+The array containg the elements to swap.
+
+##### i1
+
+The index of one of the elements to swap.
+
+##### i2
+
+The index of the other element to swap.
+
 ## UnityContrib.UnityEngine.BaseSelector
 
 Base implementation for selectors. A selector is a component that selects a [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) . The advantage of using this component is that you don't need to write the same find game object code over and over. You can simply attach an instance of a selector to a game object and let that instance find the [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) for you.
@@ -424,6 +440,92 @@ The style to use for background image and padding values. If left out, the backg
 
 An optional list of layout options that specify extra layouting properties. Any values passed in here will override settings defined by the style.
 
+## UnityContrib.UnityEngine.IEnumerableEx
+
+Provies a set of helper methods for working with the [System.Collections.IEnumerable](https://msdn.microsoft.com/en-us/library/System.Collections.IEnumerable%28v=vs.90%29.aspx) and [System.Collections.Generic.IEnumerable`1](https://msdn.microsoft.com/en-us/library/System.Collections.Generic.IEnumerable`1%28v=vs.90%29.aspx) classes.
+
+### Members
+
+#### IndexOf``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0})
+
+Searches for the specified predicate and returns the index of its first occurrence in the enumerable.
+
+##### source
+
+The enumerable to search.
+
+##### predicate
+
+A function to test each element for a condition.
+
+##### returns
+
+The index of the first occurrence of
+
+#### ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})
+
+Performs the specified action on each element of the [System.Collections.Generic.IEnumerable`1](https://msdn.microsoft.com/en-us/library/System.Collections.Generic.IEnumerable`1%28v=vs.90%29.aspx) .
+
+##### source
+
+An [System.Collections.Generic.IEnumerable`1](https://msdn.microsoft.com/en-us/library/System.Collections.Generic.IEnumerable`1%28v=vs.90%29.aspx) to iterate trough.
+
+##### action
+
+The [System.Action`1](https://msdn.microsoft.com/en-us/library/System.Action`1%28v=vs.90%29.aspx) delegate to perform on each element of the [System.Collections.Generic.IEnumerable`1](https://msdn.microsoft.com/en-us/library/System.Collections.Generic.IEnumerable`1%28v=vs.90%29.aspx) .
+
+##### returns
+
+The source for further processing.
+
+## UnityContrib.UnityEngine.IEnumeratorEx
+
+Provides helper methods for working with the [System.Collections.IEnumerator](https://msdn.microsoft.com/en-us/library/System.Collections.IEnumerator%28v=vs.90%29.aspx) class.
+
+### Members
+
+#### Recursive(System.Collections.IEnumerator,System.Int32,System.Int32)
+
+Enumerates the specified enumerator recursively. If the enumerator returns another [System.Collections.IEnumerator](https://msdn.microsoft.com/en-us/library/System.Collections.IEnumerator%28v=vs.90%29.aspx) that will also be enumerated an so forward.
+
+##### enumerator
+
+The [System.Collections.IEnumerator](https://msdn.microsoft.com/en-us/library/System.Collections.IEnumerator%28v=vs.90%29.aspx) to enumerate.
+
+##### maxRecursion
+
+The maximum number of recursion levels before aborting.
+
+##### currentRecursion
+
+The current number of recursion levels.
+
+##### returns
+
+The values of the enumeration(s).
+
+## UnityContrib.UnityEngine.ListEx
+
+Provides a set of helper methods for working with the [System.Collections.Generic.List`1](https://msdn.microsoft.com/en-us/library/System.Collections.Generic.List`1%28v=vs.90%29.aspx) class.
+
+### Members
+
+#### Swap``1(System.Collections.Generic.List{``0},System.Int32,System.Int32)
+
+Swaps the elements at indicies i1 and i2 .
+
+##### source
+
+The list containg the elements to swap.
+
+##### i1
+
+The index of one of the elements to swap.
+
+##### i2
+
+The index of the other element to swap.
+
 ## UnityContrib.UnityEngine.MassTreePlacement
 
 Values for placing random trees.
@@ -470,6 +572,46 @@ The maximum value to scale the height of a tree.
 
 The maximum number of seconds for the placement process to take. The process is aborted if it takes any longer.
 
+#### Count
+
+Gets or sets the number of trees to place.
+
+#### MinWorldY
+
+Gets or sets the lowest point to position a tree.
+
+#### MaxWorldY
+
+Gets or sets the highest point to position a tree.
+
+#### MinSlope
+
+Gets or sets the minimum allowed slope of the ground to position a tree.
+
+#### MaxSlope
+
+Gets or sets the maximum allowed slope of the ground to position a tree.
+
+#### MinWidthScale
+
+Gets or sets the minimum value to scale the width of a tree.
+
+#### MaxWidthScale
+
+Gets or sets the maximum value to scale the width of a tree.
+
+#### MinHeightScale
+
+Gets or sets the minimum value to scale the height of a tree.
+
+#### MaxHeightScale
+
+Gets or sets the maximum value to scale the height of a tree.
+
+#### MaxTime
+
+Gets or sets the maximum number of seconds for the placement process to take. The process is aborted if it takes any longer.
+
 ## UnityContrib.UnityEngine.Measure
 
 Provides methods for doing measurements of code execution.
@@ -495,6 +637,12 @@ The caption of the measurement.
 ##### action
 
 The action to measure.
+
+## UnityContrib.UnityEngine.MultilineWithWordWrapAttribute
+
+Attribute to make a string be edited with a multi-line textfield with word wrap.
+
+### Members
 
 ## UnityContrib.UnityEngine.NavMeshAgentEx
 
@@ -539,6 +687,16 @@ The end of the path.
 ##### returns
 
 The distance from start to end measured in Unity units.
+
+## UnityContrib.UnityEngine.Note
+
+A note component for game objects.
+
+### Members
+
+#### text
+
+The note.
 
 ## UnityContrib.UnityEngine.Quadtree`1
 
@@ -792,6 +950,18 @@ Quadtree for fast lookup by the player's position.
 
 Half the length of diagonalLength .
 
+#### DiagonalLength
+
+Gets or sets the length of the diagonal of the square that defines the area around the player to look for trees. A high number might result in performance issues. A low number might result in trees that can be passed through.
+
+#### MaxColliders
+
+Gets or sets the maximum number of colliders to create. A high number might result in performance issues. A low number might result in trees that can be passed through.
+
+#### Player
+
+Gets or sets the player the colliders must follow.
+
 #### Start
 
 Caches quick references and initializes the quadtree.
@@ -840,6 +1010,32 @@ Removes the specified treeInstance from the collection of trees who's collider t
 
 The [UnityEngine.TreeInstance](http://docs.unity3d.com/ScriptReference/TreeInstance.html) to remove.
 
+## UnityContrib.UnityEngine.StringEx
+
+Provides a set of helper methods for working with the [System.String](https://msdn.microsoft.com/en-us/library/System.String%28v=vs.90%29.aspx) class.
+
+### Members
+
+#### Contains(System.String,System.String,System.StringComparison)
+
+Returns a value indicating whether a specified substring occurs within this string.
+
+##### text
+
+The string to search in.
+
+##### value
+
+The string to seek.
+
+##### comparisonType
+
+One of the enumeration values that specifies the rules for the search.
+
+##### returns
+
+true if the value parameter occurs within this string, or if value is the empty string (""); otherwise, false.
+
 ## UnityContrib.UnityEngine.TagSelector
 
 Selects the game object having a specific tag name.
@@ -875,6 +1071,30 @@ Destroys all the children of the specified parent  [UnityEngine.Transform](http:
 ##### parent
 
 The parent [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) who's children to destroy.
+
+#### DecendantsDepthFirst(UnityEngine.Transform)
+
+Returns all the decendant [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) to the specified transform using depth first traversal.
+
+##### transform
+
+The parent [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) to start at.
+
+##### returns
+
+An enumerable of
+
+#### DecendantsBreadthFirst(UnityEngine.Transform)
+
+Returns all the decendant [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) to the specified transform using breadth first traversal.
+
+##### transform
+
+The parent [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) to start at.
+
+##### returns
+
+An enumerable of
 
 ## UnityContrib.UnityEngine.TreeInstanceEx
 
@@ -919,6 +1139,14 @@ Gets the prototype of the tree.
 #### TreeInstanceIndex
 
 Gets the index of the instance in the [UnityEngine.TerrainData.treeInstances](http://docs.unity3d.com/ScriptReference/TerrainData.treeInstances.html) array.
+
+#### TreeInstance
+
+Gets or sets the reference to the tree that was collided with.
+
+#### Terrain
+
+Gets or sets the reference to the terrain the tree belongs to.
 
 ## UnityContrib.UnityEngine.Vector3Ex
 
@@ -965,4 +1193,28 @@ The depth of the box.
 ##### returns
 
 The random position inside the box.
+
+#### CalculateSlopeRad(UnityEngine.Vector3)
+
+Returns the slope of the specified normal in radians. Based on Y being the up component.
+
+##### normal
+
+The normal who's slope to calculate.
+
+##### returns
+
+The slope in radians.
+
+#### CalculateSlopeDeg(UnityEngine.Vector3)
+
+Returns the slope of the specified normal in degrees. Based on Y being the up component.
+
+##### normal
+
+The normal who's slope to calculate.
+
+##### returns
+
+The slope in degrees.
 

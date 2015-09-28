@@ -21,7 +21,8 @@ namespace UnityContrib.UnityEngine
         /// A low number might result in trees that can be passed through.
         /// </summary>
         [Tooltip("The length of the diagonal of the square that defines the area around the player to look for trees.\nA high number might result in performance issues.\nA low number might result in trees that can be passed through.")]
-        public float diagonalLength = 10.0f;
+        [SerializeField]
+        private float diagonalLength = 10.0f;
 
         /// <summary>
         /// The maximum number of colliders to create.
@@ -29,13 +30,15 @@ namespace UnityContrib.UnityEngine
         /// A low number might result in trees that can be passed through.
         /// </summary>
         [Tooltip("The maximum number of colliders to create.\nA high number might result in performance issues.\nA low number might result in trees that can be passed through.")]
-        public int maxColliders = 20;
+        [SerializeField]
+        private int maxColliders = 20;
 
         /// <summary>
         /// The player the colliders must follow.
         /// </summary>
         [Tooltip("The transform the colliders must follow around.")]
-        public Transform player;
+        [SerializeField]
+        private Transform player;
 
         /// <summary>
         /// A reference to the terrain component.
@@ -73,6 +76,58 @@ namespace UnityContrib.UnityEngine
         private float diagonalLengthOver2;
 
         /// <summary>
+        /// Gets or sets the length of the diagonal of the square that defines the area around the player to look for trees.
+        /// A high number might result in performance issues.
+        /// A low number might result in trees that can be passed through.
+        /// </summary>
+        public float DiagonalLength
+        {
+            get
+            {
+                return diagonalLength;
+            }
+
+            set
+            {
+                diagonalLength = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the maximum number of colliders to create.
+        /// A high number might result in performance issues.
+        /// A low number might result in trees that can be passed through.
+        /// </summary>
+        public int MaxColliders
+        {
+            get
+            {
+                return maxColliders;
+            }
+
+            set
+            {
+                maxColliders = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the player the colliders must follow.
+        /// </summary>
+        public Transform Player
+        {
+            get
+            {
+                return player;
+            }
+
+            set
+            {
+                player = value;
+            }
+        }
+
+        /// <summary>
         /// Caches quick references and initializes the quadtree.
         /// </summary>
         /// <remarks>
@@ -80,7 +135,7 @@ namespace UnityContrib.UnityEngine
         /// </remarks>
         private void Start()
         {
-            this.diagonalLengthOver2 = this.diagonalLength * 0.5f;
+            this.diagonalLengthOver2 = this.DiagonalLength * 0.5f;
 
             this.terrain = this.GetComponent<Terrain>();
             this.data = terrain.terrainData;
@@ -106,7 +161,7 @@ namespace UnityContrib.UnityEngine
         /// </remarks>
         private void FixedUpdate()
         {
-            var playerPosition = this.player.position;
+            var playerPosition = this.Player.position;
             var delta = playerPosition - this.lastChangePosition;
 
             // don't use Vector3.Distance or Vector3.magnitude as
@@ -127,8 +182,8 @@ namespace UnityContrib.UnityEngine
             var range = new Rect(
                 playerPosition.x - this.diagonalLengthOver2,
                 playerPosition.z - this.diagonalLengthOver2,
-                this.diagonalLength,
-                this.diagonalLength
+                this.DiagonalLength,
+                this.DiagonalLength
                 );
 
             var instances = this.trees.Find(range);
@@ -168,12 +223,12 @@ namespace UnityContrib.UnityEngine
                 // activate!
                 currentCollider.gameObject.SetActive(true);
 
-                treeInstanceInfo.treeInstance = instance;
-                treeInstanceInfo.terrain = this.terrain;
+                treeInstanceInfo.TreeInstance = instance;
+                treeInstanceInfo.Terrain = this.terrain;
 
                 colliderIndex++;
 
-                if (colliderIndex > this.maxColliders)
+                if (colliderIndex > this.MaxColliders)
                 {
                     Debug.LogError("Generating colliders for too many trees, skipping");
                     break;
@@ -292,7 +347,7 @@ namespace UnityContrib.UnityEngine
             for (var index = 0; index < this.infos.Count; index++)
             {
                 var treeInstanceInfo = this.infos[index];
-                if (treeInstance.Same(treeInstanceInfo.treeInstance))
+                if (treeInstance.Same(treeInstanceInfo.TreeInstance))
                 {
                     treeInstanceInfo.gameObject.SetActive(false);
                     break;

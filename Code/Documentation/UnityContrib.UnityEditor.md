@@ -86,6 +86,18 @@ The position and size of the rectangle.
 
 The color of the rectangle.
 
+#### ChangeCheck(System.Action)
+
+Check if any control was changed inside a block of code.
+
+##### content
+
+The callback to invoke between start and end change check.
+
+##### returns
+
+true if changed; otherwise false.
+
 ## UnityContrib.UnityEditor.EditorGUIUtilityEx
 
 Provides a set of helper methods for working with GUI in the editor.
@@ -153,6 +165,56 @@ Invokes [UnityEngine.TerrainData.RecalculateTreePositions](http://docs.unity3d.c
 ##### data
 
 The instance to invoke the method on.
+
+## UnityContrib.UnityEditor.MultilineWithWordWrapPropertyDrawer
+
+Property drawer that supports multi line text and the text is word wrapped.
+
+### Members
+
+#### height
+
+The height of the text area.
+
+#### style
+
+The style to use for the text area.
+
+#### #ctor
+
+Initializes a new instance of the MultilineWithWordWrapPropertyDrawer class.
+
+#### GetPropertyHeight(UnityEditor.SerializedProperty,UnityEngine.GUIContent)
+
+The height of the text area.
+
+##### property
+
+The SerializedProperty to make the custom GUI for.
+
+##### label
+
+The label of this property.
+
+##### returns
+
+The height in pixels.
+
+#### OnGUI(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)
+
+Draws the editable property.
+
+##### position
+
+Rectangle on the screen to use for the property GUI.
+
+##### property
+
+The SerializedProperty to make the custom GUI for.
+
+##### label
+
+The label of this property.
 
 ## UnityContrib.UnityEditor.ShaderUtilEx
 

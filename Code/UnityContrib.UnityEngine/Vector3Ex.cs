@@ -66,5 +66,37 @@ namespace UnityContrib.UnityEngine
             position.z += (Random.value * 2.0f - 1.0f) * z;
             return position;
         }
+
+        /// <summary>
+        /// Returns the slope of the specified <paramref name="normal"/> in radians.
+        /// 
+        /// Based on Y being the up component.
+        /// </summary>
+        /// <param name="normal">
+        /// The normal who's slope to calculate.
+        /// </param>
+        /// <returns>
+        /// The slope in radians.
+        /// </returns>
+        public static float CalculateSlopeRad(this Vector3 normal)
+        {
+            return Mathf.Acos(Mathf.Clamp(normal.y, -1.0f, 1.0f));
+        }
+
+        /// <summary>
+        /// Returns the slope of the specified <paramref name="normal"/> in degrees.
+        /// 
+        /// Based on Y being the up component.
+        /// </summary>
+        /// <param name="normal">
+        /// The normal who's slope to calculate.
+        /// </param>
+        /// <returns>
+        /// The slope in degrees.
+        /// </returns>
+        public static float CalculateSlopeDeg(this Vector3 normal)
+        {
+            return normal.CalculateSlopeRad() * Mathf.Rad2Deg;
+        }
     }
 }

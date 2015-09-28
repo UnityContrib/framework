@@ -14,13 +14,15 @@ namespace UnityContrib.UnityEngine
         /// The reference to the tree that was collided with.
         /// </summary>
         [Tooltip("The current tree the collider is applied to.")]
-        public TreeInstance treeInstance;
+        [SerializeField]
+        private TreeInstance treeInstance;
 
         /// <summary>
         /// The reference to the terrain the tree belongs to.
         /// </summary>
         [Tooltip("The terrain the tree belongs to.")]
-        public Terrain terrain;
+        [SerializeField]
+        private Terrain terrain;
 
         /// <summary>
         /// Gets the prototype of the tree.
@@ -29,7 +31,7 @@ namespace UnityContrib.UnityEngine
         {
             get
             {
-                return this.terrain.terrainData.treePrototypes[this.treeInstance.prototypeIndex];
+                return this.Terrain.terrainData.treePrototypes[this.TreeInstance.prototypeIndex];
             }
         }
 
@@ -41,9 +43,41 @@ namespace UnityContrib.UnityEngine
             get
             {
                 return Array.FindIndex(
-                    terrain.terrainData.treeInstances,
-                    i => i.Same(treeInstance)
+                    Terrain.terrainData.treeInstances,
+                    i => i.Same(TreeInstance)
                     );
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the reference to the tree that was collided with.
+        /// </summary>
+        public TreeInstance TreeInstance
+        {
+            get
+            {
+                return treeInstance;
+            }
+
+            set
+            {
+                treeInstance = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the reference to the terrain the tree belongs to.
+        /// </summary>
+        public Terrain Terrain
+        {
+            get
+            {
+                return terrain;
+            }
+
+            set
+            {
+                terrain = value;
             }
         }
     }

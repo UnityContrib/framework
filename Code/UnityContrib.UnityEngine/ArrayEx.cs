@@ -24,5 +24,27 @@ namespace UnityContrib.UnityEngine
                 ;
             return result;
         }
+
+        /// <summary>
+        /// Swaps the elements at indicies <paramref name="i1"/> and <paramref name="i2"/>.
+        /// </summary>
+        /// <typeparam name="T">
+        /// The type of the elements in the array.
+        /// </typeparam>
+        /// <param name="source">
+        /// The array containg the elements to swap.
+        /// </param>
+        /// <param name="i1">
+        /// The index of one of the elements to swap.
+        /// </param>
+        /// <param name="i2">
+        /// The index of the other element to swap.
+        /// </param>
+        public static void Swap<T>(this T[] source, int i1, int i2)
+        {
+            var t = source[i1];
+            source[i1] = source[i2];
+            source[i2] = t;
+        }
     }
 }
