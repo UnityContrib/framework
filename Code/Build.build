@@ -71,7 +71,7 @@
 	<property name="now" value="${datetime::now()}"/>
 	<property name="msBuild" value="${environment::get-folder-path('ProgramFilesX86')}\MSBuild\14.0\Bin\MSBuild.exe" />
 
-	<target name="build" depends="updateVersion, compile, pdb2mdb, compress" description="Versioning, compile, generate MDB and compress">
+	<target name="build" depends="updateVersion, compile, pdb2mdb, compress, copy-to-unity" description="Versioning, compile, generate MDB and compress">
 	</target>
 
 	<target name="updateVersion" description="Updates the assemblies version">
@@ -140,6 +140,23 @@
 				<include name="UnityContrib.UnityEditor.xml"/>
 			</fileset>
 		</zip>
+	</target>
+	
+	<target name="copy-to-unity" description="Copies assemblies and MDB to Unity project">
+		<copy todir=".\..\Unity\Assets\UnityContrib\Assemblies" overwrite="true">
+			<fileset basedir="${baseDir}\UnityContrib.UnityEngine\bin\Debug">
+				<include name="UnityContrib.UnityEngine.dll"/>
+				<include name="UnityContrib.UnityEngine.dll.mdb"/>
+				<include name="UnityContrib.UnityEngine.xml"/>
+			</fileset>
+		</copy>
+		<copy todir=".\..\Unity\Assets\UnityContrib\Assemblies\Editor" overwrite="true">
+			<fileset basedir="${baseDir}\UnityContrib.UnityEditor\bin\Debug">
+				<include name="UnityContrib.UnityEditor.dll"/>
+				<include name="UnityContrib.UnityEditor.dll.mdb"/>
+				<include name="UnityContrib.UnityEditor.xml"/>
+			</fileset>
+		</copy>
 	</target>
 
 </project>
