@@ -69,8 +69,23 @@ namespace UnityContrib.UnityEngine
 
         /// <summary>
         /// Returns the slope of the specified <paramref name="normal"/> in radians.
-        /// 
-        /// Based on Y being the up component.
+        /// </summary>
+        /// <param name="normal">
+        /// The normal who's slope to calculate.
+        /// </param>
+        /// <param name="up">
+        /// The up direction.
+        /// </param>
+        /// <returns>
+        /// The slope in radians.
+        /// </returns>
+        public static float CalculateSlopeRad(this Vector3 normal, Vector3 up)
+        {
+            return Mathf.Abs(Vector3.Dot(up, normal));
+        }
+
+        /// <summary>
+        /// Returns the slope of the specified <paramref name="normal"/> in radians.
         /// </summary>
         /// <param name="normal">
         /// The normal who's slope to calculate.
@@ -80,7 +95,26 @@ namespace UnityContrib.UnityEngine
         /// </returns>
         public static float CalculateSlopeRad(this Vector3 normal)
         {
-            return Mathf.Acos(Mathf.Clamp(normal.y, -1.0f, 1.0f));
+            return normal.CalculateSlopeRad(Vector3.up);
+        }
+
+        /// <summary>
+        /// Returns the slope of the specified <paramref name="normal"/> in degrees.
+        /// 
+        /// Based on Y being the up component.
+        /// </summary>
+        /// <param name="normal">
+        /// The normal who's slope to calculate.
+        /// </param>
+        /// <param name="up">
+        /// The up direction.
+        /// </param>
+        /// <returns>
+        /// The slope in degrees.
+        /// </returns>
+        public static float CalculateSlopeDeg(this Vector3 normal, Vector3 up)
+        {
+            return normal.CalculateSlopeRad(up) * Mathf.Rad2Deg;
         }
 
         /// <summary>

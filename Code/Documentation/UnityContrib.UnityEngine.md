@@ -1194,9 +1194,25 @@ The depth of the box.
 
 The random position inside the box.
 
+#### CalculateSlopeRad(UnityEngine.Vector3,UnityEngine.Vector3)
+
+Returns the slope of the specified normal in radians.
+
+##### normal
+
+The normal who's slope to calculate.
+
+##### up
+
+The up direction.
+
+##### returns
+
+The slope in radians.
+
 #### CalculateSlopeRad(UnityEngine.Vector3)
 
-Returns the slope of the specified normal in radians. Based on Y being the up component.
+Returns the slope of the specified normal in radians.
 
 ##### normal
 
@@ -1205,6 +1221,22 @@ The normal who's slope to calculate.
 ##### returns
 
 The slope in radians.
+
+#### CalculateSlopeDeg(UnityEngine.Vector3,UnityEngine.Vector3)
+
+Returns the slope of the specified normal in degrees. Based on Y being the up component.
+
+##### normal
+
+The normal who's slope to calculate.
+
+##### up
+
+The up direction.
+
+##### returns
+
+The slope in degrees.
 
 #### CalculateSlopeDeg(UnityEngine.Vector3)
 

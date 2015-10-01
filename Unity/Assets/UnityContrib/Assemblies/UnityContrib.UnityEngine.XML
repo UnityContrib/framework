@@ -20,6 +20,23 @@
             true if the array is null or empty; otherwise false.
             </returns>
         </member>
+        <member name="M:UnityContrib.UnityEngine.ArrayEx.Swap``1(``0[],System.Int32,System.Int32)">
+            <summary>
+            Swaps the elements at indicies <paramref name="i1"/> and <paramref name="i2"/>.
+            </summary>
+            <typeparam name="T">
+            The type of the elements in the array.
+            </typeparam>
+            <param name="source">
+            The array containg the elements to swap.
+            </param>
+            <param name="i1">
+            The index of one of the elements to swap.
+            </param>
+            <param name="i2">
+            The index of the other element to swap.
+            </param>
+        </member>
         <member name="T:UnityContrib.UnityEngine.BaseSelector">
             <summary>
             Base implementation for selectors.
@@ -389,6 +406,95 @@
             An optional list of layout options that specify extra layouting properties. Any values passed in here will override settings defined by the style.
             </param>
         </member>
+        <member name="T:UnityContrib.UnityEngine.IEnumerableEx">
+            <summary>
+            Provies a set of helper methods for working with the
+            <see cref="T:System.Collections.IEnumerable"/> and
+            <see cref="T:System.Collections.Generic.IEnumerable`1"/> classes.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.IEnumerableEx.IndexOf``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0})">
+            <summary>
+            Searches for the specified <paramref name="predicate"/>
+            and returns the index of its first occurrence in the enumerable.
+            </summary>
+            <typeparam name="T">
+            The type of the elements of source.
+            </typeparam>
+            <param name="source">
+            The enumerable to search.
+            </param>
+            <param name="predicate">
+            A function to test each element for a condition.
+            </param>
+            <returns>
+            The index of the first occurrence of <paramref name="predicate"/>, if found; otherwise minus 1.
+            </returns>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.IEnumerableEx.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary>
+            Performs the specified action on each element of the <see cref="T:System.Collections.Generic.IEnumerable`1"/>.
+            </summary>
+            <typeparam name="T">
+            The type of the elements of <paramref name="source"/>.
+            </typeparam>
+            <param name="source">
+            An <see cref="T:System.Collections.Generic.IEnumerable`1"/> to iterate trough.
+            </param>
+            <param name="action">
+            The <see cref="T:System.Action`1"/> delegate to perform on each element of the <see cref="T:System.Collections.Generic.IEnumerable`1"/>.
+            </param>
+            <returns>
+            The source for further processing.
+            </returns>
+        </member>
+        <member name="T:UnityContrib.UnityEngine.IEnumeratorEx">
+            <summary>
+            Provides helper methods for working with the <see cref="T:System.Collections.IEnumerator"/> class.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.IEnumeratorEx.Recursive(System.Collections.IEnumerator,System.Int32,System.Int32)">
+            <summary>
+            Enumerates the specified <paramref name="enumerator"/> recursively.
+            
+            If the <paramref name="enumerator"/> returns another 
+            <see cref="T:System.Collections.IEnumerator"/> that will also be enumerated an so forward.
+            </summary>
+            <param name="enumerator">
+            The <see cref="T:System.Collections.IEnumerator"/> to enumerate.
+            </param>
+            <param name="maxRecursion">
+            The maximum number of recursion levels before aborting.
+            </param>
+            <param name="currentRecursion">
+            The current number of recursion levels.
+            </param>
+            <returns>
+            The values of the enumeration(s).
+            </returns>
+        </member>
+        <member name="T:UnityContrib.UnityEngine.ListEx">
+            <summary>
+            Provides a set of helper methods for working with the <see cref="T:System.Collections.Generic.List`1"/> class.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.ListEx.Swap``1(System.Collections.Generic.List{``0},System.Int32,System.Int32)">
+            <summary>
+            Swaps the elements at indicies <paramref name="i1"/> and <paramref name="i2"/>.
+            </summary>
+            <typeparam name="T">
+            The type of the elements in the list.
+            </typeparam>
+            <param name="source">
+            The list containg the elements to swap.
+            </param>
+            <param name="i1">
+            The index of one of the elements to swap.
+            </param>
+            <param name="i2">
+            The index of the other element to swap.
+            </param>
+        </member>
         <member name="T:UnityContrib.UnityEngine.MassTreePlacement">
             <summary>
             Values for placing random trees.
@@ -448,6 +554,57 @@
             The process is aborted if it takes any longer.
             </summary>
         </member>
+        <member name="P:UnityContrib.UnityEngine.MassTreePlacement.Count">
+            <summary>
+            Gets or sets the number of trees to place.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.MassTreePlacement.MinWorldY">
+            <summary>
+            Gets or sets the lowest point to position a tree.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.MassTreePlacement.MaxWorldY">
+            <summary>
+            Gets or sets the highest point to position a tree.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.MassTreePlacement.MinSlope">
+            <summary>
+            Gets or sets the minimum allowed slope of the ground to position a tree.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.MassTreePlacement.MaxSlope">
+            <summary>
+            Gets or sets the maximum allowed slope of the ground to position a tree.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.MassTreePlacement.MinWidthScale">
+            <summary>
+            Gets or sets the minimum value to scale the width of a tree.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.MassTreePlacement.MaxWidthScale">
+            <summary>
+            Gets or sets the maximum value to scale the width of a tree.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.MassTreePlacement.MinHeightScale">
+            <summary>
+            Gets or sets the minimum value to scale the height of a tree.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.MassTreePlacement.MaxHeightScale">
+            <summary>
+            Gets or sets the maximum value to scale the height of a tree.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.MassTreePlacement.MaxTime">
+            <summary>
+            Gets or sets the maximum number of seconds for the placement process to take.
+            The process is aborted if it takes any longer.
+            </summary>
+        </member>
         <member name="T:UnityContrib.UnityEngine.Measure">
             <summary>
             Provides methods for doing measurements of code execution.
@@ -471,6 +628,11 @@
             <param name="action">
             The action to measure.
             </param>
+        </member>
+        <member name="T:UnityContrib.UnityEngine.MultilineWithWordWrapAttribute">
+            <summary>
+            Attribute to make a string be edited with a multi-line textfield with word wrap.
+            </summary>
         </member>
         <member name="T:UnityContrib.UnityEngine.NavMeshAgentEx">
             <summary>
@@ -509,6 +671,19 @@
             <returns>
             The distance from start to end measured in Unity units.
             </returns>
+        </member>
+        <member name="T:UnityContrib.UnityEngine.Note">
+            <summary>
+            A note component for game objects.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.Note.text">
+            <summary>
+            The note.
+            </summary>
+            <remarks>
+            By design this field is never used in code.
+            </remarks>
         </member>
         <member name="T:UnityContrib.UnityEngine.Quadtree`1">
             <summary>
@@ -789,6 +964,25 @@
             Half the length of <see cref="F:diagonalLength"/>.
             </summary>
         </member>
+        <member name="P:UnityContrib.UnityEngine.RuntimeTreeColliders.DiagonalLength">
+            <summary>
+            Gets or sets the length of the diagonal of the square that defines the area around the player to look for trees.
+            A high number might result in performance issues.
+            A low number might result in trees that can be passed through.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.RuntimeTreeColliders.MaxColliders">
+            <summary>
+            Gets or sets the maximum number of colliders to create.
+            A high number might result in performance issues.
+            A low number might result in trees that can be passed through.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.RuntimeTreeColliders.Player">
+            <summary>
+            Gets or sets the player the colliders must follow.
+            </summary>
+        </member>
         <member name="M:UnityContrib.UnityEngine.RuntimeTreeColliders.Start">
             <summary>
             Caches quick references and initializes the quadtree.
@@ -845,6 +1039,28 @@
             The <see cref="T:UnityEngine.TreeInstance"/> to remove.
             </param>
         </member>
+        <member name="T:UnityContrib.UnityEngine.StringEx">
+            <summary>
+            Provides a set of helper methods for working with the <see cref="T:System.String"/> class.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.StringEx.Contains(System.String,System.String,System.StringComparison)">
+            <summary>
+            Returns a value indicating whether a specified substring occurs within this string.
+            </summary>
+            <param name="text">
+            The string to search in.
+            </param>
+            <param name="value">
+            The string to seek. 
+            </param>
+            <param name="comparisonType">
+            One of the enumeration values that specifies the rules for the search.
+            </param>
+            <returns>
+            true if the value parameter occurs within this string, or if value is the empty string (""); otherwise, false.
+            </returns>
+        </member>
         <member name="T:UnityContrib.UnityEngine.TagSelector">
             <summary>
             Selects the game object having a specific tag name.
@@ -880,6 +1096,28 @@
             <param name="parent">
             The parent <see cref="T:UnityEngine.Transform"/> who's children to destroy.
             </param>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.TransformEx.DecendantsDepthFirst(UnityEngine.Transform)">
+            <summary>
+            Returns all the decendant <see cref="T:UnityEngine.Transform"/> to the specified <paramref name="transform"/> using depth first traversal.
+            </summary>
+            <param name="transform">
+            The parent <see cref="T:UnityEngine.Transform"/> to start at.
+            </param>
+            <returns>
+            An enumerable of <see cref="T:UnityEngine.Transform"/>.
+            </returns>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.TransformEx.DecendantsBreadthFirst(UnityEngine.Transform)">
+            <summary>
+            Returns all the decendant <see cref="T:UnityEngine.Transform"/> to the specified <paramref name="transform"/> using breadth first traversal.
+            </summary>
+            <param name="transform">
+            The parent <see cref="T:UnityEngine.Transform"/> to start at.
+            </param>
+            <returns>
+            An enumerable of <see cref="T:UnityEngine.Transform"/>.
+            </returns>
         </member>
         <member name="T:UnityContrib.UnityEngine.TreeInstanceEx">
             <summary>
@@ -923,6 +1161,16 @@
         <member name="P:UnityContrib.UnityEngine.TreeInstanceInfo.TreeInstanceIndex">
             <summary>
             Gets the index of the instance in the <see cref="F:UnityEngine.TerrainData.treeInstances"/> array.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.TreeInstanceInfo.TreeInstance">
+            <summary>
+            Gets or sets the reference to the tree that was collided with.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.TreeInstanceInfo.Terrain">
+            <summary>
+            Gets or sets the reference to the terrain the tree belongs to.
             </summary>
         </member>
         <member name="T:UnityContrib.UnityEngine.Vector3Ex">
@@ -979,6 +1227,32 @@
                 var within = center.Within(20.0f, 30.0f, 40.0f);
             }
             </example>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.Vector3Ex.CalculateSlopeRad(UnityEngine.Vector3)">
+            <summary>
+            Returns the slope of the specified <paramref name="normal"/> in radians.
+            
+            Based on Y being the up component.
+            </summary>
+            <param name="normal">
+            The normal who's slope to calculate.
+            </param>
+            <returns>
+            The slope in radians.
+            </returns>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.Vector3Ex.CalculateSlopeDeg(UnityEngine.Vector3)">
+            <summary>
+            Returns the slope of the specified <paramref name="normal"/> in degrees.
+            
+            Based on Y being the up component.
+            </summary>
+            <param name="normal">
+            The normal who's slope to calculate.
+            </param>
+            <returns>
+            The slope in degrees.
+            </returns>
         </member>
     </members>
 </doc>

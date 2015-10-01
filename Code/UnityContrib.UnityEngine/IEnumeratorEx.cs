@@ -46,6 +46,8 @@ namespace UnityContrib.UnityEngine
                         yield return childResult;
                     }
                 }
+
+                yield return null;
             }
         }
     }

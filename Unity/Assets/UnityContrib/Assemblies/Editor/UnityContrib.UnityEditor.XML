@@ -102,6 +102,17 @@
             The color of the rectangle.
             </param>
         </member>
+        <member name="M:UnityContrib.UnityEditor.EditorGUIEx.ChangeCheck(System.Action)">
+            <summary>
+            Check if any control was changed inside a block of code.
+            </summary>
+            <param name="content">
+            The callback to invoke between start and end change check.
+            </param>
+            <returns>
+            true if changed; otherwise false.
+            </returns>
+        </member>
         <member name="T:UnityContrib.UnityEditor.EditorGUIUtilityEx">
             <summary>
             Provides a set of helper methods for working with GUI in the editor.
@@ -174,6 +185,54 @@
             Some say it is enough to simply call <see cref="M:UnityEngine.Terrain.Flush"/>
             however I'm not sure what the difference is, so I'm calling this just to be on the safe side.
             </remarks>
+        </member>
+        <member name="T:UnityContrib.UnityEditor.MultilineWithWordWrapPropertyDrawer">
+            <summary>
+            Property drawer that supports multi line text and the text is word wrapped.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEditor.MultilineWithWordWrapPropertyDrawer.height">
+            <summary>
+            The height of the text area.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEditor.MultilineWithWordWrapPropertyDrawer.style">
+            <summary>
+            The style to use for the text area.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEditor.MultilineWithWordWrapPropertyDrawer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MultilineWithWordWrapPropertyDrawer"/> class.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEditor.MultilineWithWordWrapPropertyDrawer.GetPropertyHeight(UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
+            <summary>
+            The height of the text area.
+            </summary>
+            <param name="property">
+            The SerializedProperty to make the custom GUI for.
+            </param>
+            <param name="label">
+            The label of this property.
+            </param>
+            <returns>
+            The height in pixels. 
+            </returns>
+        </member>
+        <member name="M:UnityContrib.UnityEditor.MultilineWithWordWrapPropertyDrawer.OnGUI(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
+            <summary>
+            Draws the editable property.
+            </summary>
+            <param name="position">
+            Rectangle on the screen to use for the property GUI.
+            </param>
+            <param name="property">
+            The SerializedProperty to make the custom GUI for.
+            </param>
+            <param name="label">
+            The label of this property.
+            </param>
         </member>
         <member name="T:UnityContrib.UnityEditor.ShaderUtilEx">
             <summary>
