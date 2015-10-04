@@ -5,6 +5,7 @@ This project will replace [this](https://github.com/robintheilade/unityframework
 
 ## Features
 
+* Timeline log window ([Documentation](https://github.com/UnityContrib/framework/wiki/Timeline-Editor-Window))
 * Quad-tree
 * Many extension methods (see API reference for details)
 * DontDestroyOnLoad behaviour
