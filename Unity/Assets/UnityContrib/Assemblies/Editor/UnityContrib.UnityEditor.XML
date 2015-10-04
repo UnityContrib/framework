@@ -297,5 +297,209 @@
             true if trees and foliage is drawn; otherwise false.
             </param>
         </member>
+        <member name="T:UnityContrib.UnityEditor.TimelineLogWindow">
+            <summary>
+            Editor window displaying the timeline.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEditor.TimelineLogWindow.skin">
+            <summary>
+            The skin to use for the timeline.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEditor.TimelineLogWindow.sourceStyle">
+            <summary>
+            The style to use for the source foldout.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEditor.TimelineLogWindow.categoryStyle">
+            <summary>
+            The style to use for the category label.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEditor.TimelineLogWindow.entryStyle">
+            <summary>
+            The style to use for the entry label.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEditor.TimelineLogWindow.zoomStyle">
+            <summary>
+            The style to use for the zoom label.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEditor.TimelineLogWindow.verticalScrollbarStyle">
+            <summary>
+            The style to use for the vertical scrollbar.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEditor.TimelineLogWindow.horizontalScrollbarStyle">
+            <summary>
+            The style to use for the horizontal scrollbar.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEditor.TimelineLogWindow.headerWidth">
+            <summary>
+            The width of the header column.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEditor.TimelineLogWindow.rowHeight">
+            <summary>
+            The height of header rows.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEditor.TimelineLogWindow.entryRowHeight">
+            <summary>
+            The height of entry rows.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEditor.TimelineLogWindow.minEntryWidth">
+            <summary>
+            The minimum width of an entry.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEditor.TimelineLogWindow.timeScale">
+            <summary>
+            The scale of the timeline.
+            Used to control zoom.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEditor.TimelineLogWindow.bgColor1">
+            <summary>
+            The background color of even rows.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEditor.TimelineLogWindow.bgColor2">
+            <summary>
+            The background color of odd rows.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEditor.TimelineLogWindow.verticalScrollPosition">
+            <summary>
+            The position of the handle for the vertical scrollbar.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEditor.TimelineLogWindow.horizontalScrollPosition">
+            <summary>
+            The position of the handle for the horizontal scrollbar.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEditor.TimelineLogWindow.scrollbarWidth">
+            <summary>
+            The width of the vertical scrollbar.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEditor.TimelineLogWindow.scrollbarHeight">
+            <summary>
+            The height of the horizontal scrollbar.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEditor.TimelineLogWindow.canvasWidth">
+            <summary>
+            The width of the horizontal scroll view.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEditor.TimelineLogWindow.canvasHeight">
+            <summary>
+            The height of the vertical scroll view.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEditor.TimelineLogWindow.verticalScrollRect">
+            <summary>
+            The visible boundaries of the vertical scroll view.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEditor.TimelineLogWindow.verticalScrollViewRect">
+            <summary>
+            The total bounaries of the vertical scroll view.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEditor.TimelineLogWindow.horizontalScrollRect">
+            <summary>
+            The visible boundaries of the horizontal scroll view.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEditor.TimelineLogWindow.horizontalScrollViewRect">
+            <summary>
+            The total boundaries of the horizontal scroll view.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEditor.TimelineLogWindow.ShowWindow">
+            <summary>
+            Displays the timeline editor window.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEditor.TimelineLogWindow.OnEnable">
+            <summary>
+            Loads skin and caches references to styles.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEditor.TimelineLogWindow.OnPlayStarted">
+            <summary>
+            Repaints the timeline when start playing.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEditor.TimelineLogWindow.OnPlayStopped">
+            <summary>
+            Repaints the timeline when end playing.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEditor.TimelineLogWindow.CalculateLayout">
+            <summary>
+            Calculates sizes and boundaries for the timeline.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEditor.TimelineLogWindow.OnGUI">
+            <summary>
+            Prepares and renders the timeline.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEditor.TimelineLogWindow.AddItemsToMenu(UnityEditor.GenericMenu)">
+            <summary>
+            Adds export feature to timeline menu.
+            </summary>
+            <param name="menu">
+            The menu to add the features to.
+            </param>
+        </member>
+        <member name="M:UnityContrib.UnityEditor.TimelineLogWindow.ExportAsCSV">
+            <summary>
+            Exports the timeline to comma separated values (CSV) plain text file format.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEditor.TimelineLogWindow.UpdateZoom">
+            <summary>
+            Converts mouse input to zoom level.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEditor.TimelineLogWindow.DrawWindow">
+            <summary>
+            Renders the timeline.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEditor.TimelineLogWindow.DrawBackground">
+            <summary>
+            Renders the background of the timeline.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEditor.TimelineLogWindow.DrawNames">
+            <summary>
+            Renders the header column.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEditor.TimelineLogWindow.DrawEntries">
+            <summary>
+            Renders the entries.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEditor.TimelineLogWindow.DrawScrollbars">
+            <summary>
+            Renders the scrollbars.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEditor.TimelineLogWindow.DrawZoomInfo">
+            <summary>
+            Renders the zoom level.
+            </summary>
+        </member>
     </members>
 </doc>

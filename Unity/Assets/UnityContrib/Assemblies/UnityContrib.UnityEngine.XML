@@ -1084,6 +1084,158 @@
             The selected <see cref="T:UnityEngine.Transform"/>.
             </returns>
         </member>
+        <member name="T:UnityContrib.UnityEngine.TimelineLog">
+            <summary>
+            Records an entry for the timeline.
+            </summary>
+            <example>
+            using(new TimelineLog("Example", "Waiting", "Waiting for 2.5 seconds"))
+            {
+                yield return new WaitForSeconds(2.5f);
+            }
+            </example>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.TimelineLog.sources">
+            <summary>
+            Hashtable of sources.
+            The key is the name of the source.
+            The value is another hashtable containing the categories of the source.
+            </summary>
+            <remarks>
+            <see cref="T:System.Collections.Hashtable"/> is much faster than <see cref="T:System.Collections.Generic.Dictionary`2"/>.
+            </remarks>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.TimelineLog.source">
+            <summary>
+            The source of the entry.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.TimelineLog.category">
+            <summary>
+            The category of the entry.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.TimelineLog.message">
+            <summary>
+            The message of the entry.
+            </summary>
+        </member>
+        <member name="F:UnityContrib.UnityEngine.TimelineLog.start">
+            <summary>
+            The time in seconds when the log entry started.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.TimelineLog.Color">
+            <summary>
+            Gets or sets the color of the log entry when displayed.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.TimelineLog.Sources">
+            <summary>
+            Gets the sources logged.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.TimelineLog.MaxTime">
+            <summary>
+            Gets the maximum time in seconds logged.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.TimelineLog.TotalSources">
+            <summary>
+            Gets the number of sources logged.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.TimelineLog.TotalCategories">
+            <summary>
+            Gets the number of categories logged across sources.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.TimelineLog.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:UnityContrib.UnityEngine.TimelineLog"/> class.
+            </summary>
+            <param name="source">
+            The source of the entry.
+            </param>
+            <param name="category">
+            The category of the entry.
+            </param>
+            <param name="message">
+            The message of the entry.
+            </param>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.TimelineLog.Dispose">
+            <summary>
+            Finalizes the log entry and records it.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.TimelineLog.Clear">
+            <summary>
+            Clears the timeline.
+            </summary>
+        </member>
+        <member name="T:UnityContrib.UnityEngine.TimelineLogEntry">
+            <summary>
+            Log entry for the timeline.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.TimelineLogEntry.Message">
+            <summary>
+            Gets the message for the log entry.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.TimelineLogEntry.Start">
+            <summary>
+            Gets the time in seconds when the log entry started.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.TimelineLogEntry.End">
+            <summary>
+            Gets the time in seconds when the log entry ended.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.TimelineLogEntry.Color">
+            <summary>
+            Gets the color of the log entry when displayed.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.TimelineLogEntry.#ctor(System.String,System.Single,System.Single,UnityEngine.Color)">
+            <summary>
+            Initializes a new instance of the <see cref="T:UnityContrib.UnityEngine.TimelineLogEntry"/> class.
+            </summary>
+            <param name="message">
+            The textual message for the log entry.
+            </param>
+            <param name="start">
+            The time in seconds when the log entry started.
+            </param>
+            <param name="end">
+            The time in seconds when the log entry started.
+            </param>
+            <param name="color">
+            The color of the log entry when displayed.
+            </param>
+        </member>
+        <member name="T:UnityContrib.UnityEngine.TimelineLogSource">
+            <summary>
+            Source information for log entries in the timeline.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.TimelineLogSource.Categories">
+            <summary>
+            Gets the categories of the source.
+            </summary>
+        </member>
+        <member name="P:UnityContrib.UnityEngine.TimelineLogSource.IsFolded">
+            <summary>
+            Gets or sets a value indicating if the source is folded as opposed to expanded.
+            </summary>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.TimelineLogSource.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:UnityContrib.UnityEngine"/> class.
+            </summary>
+        </member>
         <member name="T:UnityContrib.UnityEngine.TransformEx">
             <summary>
             Provides helper methods for working with the <see cref="T:UnityEngine.Transform"/> class.
@@ -1228,17 +1380,45 @@
             }
             </example>
         </member>
+        <member name="M:UnityContrib.UnityEngine.Vector3Ex.CalculateSlopeRad(UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>
+            Returns the slope of the specified <paramref name="normal"/> in radians.
+            </summary>
+            <param name="normal">
+            The normal who's slope to calculate.
+            </param>
+            <param name="up">
+            The up direction.
+            </param>
+            <returns>
+            The slope in radians.
+            </returns>
+        </member>
         <member name="M:UnityContrib.UnityEngine.Vector3Ex.CalculateSlopeRad(UnityEngine.Vector3)">
             <summary>
             Returns the slope of the specified <paramref name="normal"/> in radians.
-            
-            Based on Y being the up component.
             </summary>
             <param name="normal">
             The normal who's slope to calculate.
             </param>
             <returns>
             The slope in radians.
+            </returns>
+        </member>
+        <member name="M:UnityContrib.UnityEngine.Vector3Ex.CalculateSlopeDeg(UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>
+            Returns the slope of the specified <paramref name="normal"/> in degrees.
+            
+            Based on Y being the up component.
+            </summary>
+            <param name="normal">
+            The normal who's slope to calculate.
+            </param>
+            <param name="up">
+            The up direction.
+            </param>
+            <returns>
+            The slope in degrees.
             </returns>
         </member>
         <member name="M:UnityContrib.UnityEngine.Vector3Ex.CalculateSlopeDeg(UnityEngine.Vector3)">

@@ -280,3 +280,169 @@ The [UnityEngine.Terrain](http://docs.unity3d.com/ScriptReference/Terrain.html) 
 
 true if trees and foliage is drawn; otherwise false.
 
+## UnityContrib.UnityEditor.TimelineLogWindow
+
+Editor window displaying the timeline.
+
+### Members
+
+#### skin
+
+The skin to use for the timeline.
+
+#### sourceStyle
+
+The style to use for the source foldout.
+
+#### categoryStyle
+
+The style to use for the category label.
+
+#### entryStyle
+
+The style to use for the entry label.
+
+#### zoomStyle
+
+The style to use for the zoom label.
+
+#### verticalScrollbarStyle
+
+The style to use for the vertical scrollbar.
+
+#### horizontalScrollbarStyle
+
+The style to use for the horizontal scrollbar.
+
+#### headerWidth
+
+The width of the header column.
+
+#### rowHeight
+
+The height of header rows.
+
+#### entryRowHeight
+
+The height of entry rows.
+
+#### minEntryWidth
+
+The minimum width of an entry.
+
+#### timeScale
+
+The scale of the timeline. Used to control zoom.
+
+#### bgColor1
+
+The background color of even rows.
+
+#### bgColor2
+
+The background color of odd rows.
+
+#### verticalScrollPosition
+
+The position of the handle for the vertical scrollbar.
+
+#### horizontalScrollPosition
+
+The position of the handle for the horizontal scrollbar.
+
+#### scrollbarWidth
+
+The width of the vertical scrollbar.
+
+#### scrollbarHeight
+
+The height of the horizontal scrollbar.
+
+#### canvasWidth
+
+The width of the horizontal scroll view.
+
+#### canvasHeight
+
+The height of the vertical scroll view.
+
+#### verticalScrollRect
+
+The visible boundaries of the vertical scroll view.
+
+#### verticalScrollViewRect
+
+The total bounaries of the vertical scroll view.
+
+#### horizontalScrollRect
+
+The visible boundaries of the horizontal scroll view.
+
+#### horizontalScrollViewRect
+
+The total boundaries of the horizontal scroll view.
+
+#### ShowWindow
+
+Displays the timeline editor window.
+
+#### OnEnable
+
+Loads skin and caches references to styles.
+
+#### OnPlayStarted
+
+Repaints the timeline when start playing.
+
+#### OnPlayStopped
+
+Repaints the timeline when end playing.
+
+#### CalculateLayout
+
+Calculates sizes and boundaries for the timeline.
+
+#### OnGUI
+
+Prepares and renders the timeline.
+
+#### AddItemsToMenu(UnityEditor.GenericMenu)
+
+Adds export feature to timeline menu.
+
+##### menu
+
+The menu to add the features to.
+
+#### ExportAsCSV
+
+Exports the timeline to comma separated values (CSV) plain text file format.
+
+#### UpdateZoom
+
+Converts mouse input to zoom level.
+
+#### DrawWindow
+
+Renders the timeline.
+
+#### DrawBackground
+
+Renders the background of the timeline.
+
+#### DrawNames
+
+Renders the header column.
+
+#### DrawEntries
+
+Renders the entries.
+
+#### DrawScrollbars
+
+Renders the scrollbars.
+
+#### DrawZoomInfo
+
+Renders the zoom level.
+

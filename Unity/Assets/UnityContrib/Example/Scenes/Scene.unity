@@ -114,6 +114,7 @@ Transform:
   - {fileID: 2039894104}
   - {fileID: 97710769}
   - {fileID: 754759180}
+  - {fileID: 1446508893}
   m_Father: {fileID: 0}
   m_RootOrder: 9
 --- !u!114 &7368677
@@ -213,6 +214,7 @@ GameObject:
   - 224: {fileID: 97710769}
   - 223: {fileID: 97710771}
   - 114: {fileID: 97710770}
+  - 114: {fileID: 97710772}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -276,10 +278,416 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &97710772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 97710768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4595f08b025b941b9c5c6a57e7329f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &191220588
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 191220589}
+  - 114: {fileID: 191220593}
+  - 114: {fileID: 191220590}
+  - 33: {fileID: 191220592}
+  - 23: {fileID: 191220591}
+  m_Layer: 0
+  m_Name: TrafficLight-B
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &191220589
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 191220588}
+  m_LocalRotation: {x: 0, y: .285389632, z: 0, w: .958411634}
+  m_LocalPosition: {x: -1.13600004, y: 1.5, z: 3.49900007}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 766451951}
+  m_RootOrder: 9
+--- !u!114 &191220590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 191220588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c977d32c715501042945763480a0b401, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!23 &191220591
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 191220588}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4a0098bdbc158574b96fb1c0f4a75931, type: 2}
+  - {fileID: 2100000, guid: a93ba658d19025a44974fdf81d96bc56, type: 2}
+  - {fileID: 2100000, guid: 0a8d7b62f54d52843bd3eb8dd5f7ffb9, type: 2}
+  - {fileID: 2100000, guid: 349a86d6065256b4086e7d3e7a648ea3, type: 2}
+  - {fileID: 2100000, guid: 15ced198acec4374b88412d0315f9174, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &191220592
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 191220588}
+  m_Mesh: {fileID: 4300012, guid: 46095e4eb03dd1446b4d92db01f725c1, type: 3}
+--- !u!114 &191220593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 191220588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -759153396, guid: 5b8d02639d7d5a043a36bdf69a81f64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'This is a single traffic light with 3 colors: red, yellow and green.
+
+
+    The characters after the dash in the game object''s name represents which states
+    the traffic light is a member of. A traffic light can be member of more than one
+    state. This is useful when the light can be green in multiple scenarios.
+
+'
+--- !u!1 &236424313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 236424314}
+  m_Layer: 0
+  m_Name: TimelineDemo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &236424314
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 236424313}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 289.998535, y: 3.3499999, z: -30.1362305}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 766451951}
+  - {fileID: 1865930950}
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
 --- !u!4 &331379346 stripped
 Transform:
   m_PrefabParentObject: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
   m_PrefabInternal: {fileID: 2008234683}
+--- !u!1 &340317275
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 340317276}
+  - 114: {fileID: 340317280}
+  - 114: {fileID: 340317277}
+  - 33: {fileID: 340317279}
+  - 23: {fileID: 340317278}
+  m_Layer: 0
+  m_Name: TrafficLight-C
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &340317276
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 340317275}
+  m_LocalRotation: {x: 0, y: .354667604, z: 0, w: .934992492}
+  m_LocalPosition: {x: .412, y: 1.5, z: .335999995}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 766451951}
+  m_RootOrder: 13
+--- !u!114 &340317277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 340317275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c977d32c715501042945763480a0b401, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!23 &340317278
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 340317275}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4a0098bdbc158574b96fb1c0f4a75931, type: 2}
+  - {fileID: 2100000, guid: a93ba658d19025a44974fdf81d96bc56, type: 2}
+  - {fileID: 2100000, guid: 0a8d7b62f54d52843bd3eb8dd5f7ffb9, type: 2}
+  - {fileID: 2100000, guid: 349a86d6065256b4086e7d3e7a648ea3, type: 2}
+  - {fileID: 2100000, guid: 15ced198acec4374b88412d0315f9174, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &340317279
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 340317275}
+  m_Mesh: {fileID: 4300012, guid: 46095e4eb03dd1446b4d92db01f725c1, type: 3}
+--- !u!114 &340317280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 340317275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -759153396, guid: 5b8d02639d7d5a043a36bdf69a81f64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'This is a single traffic light with 3 colors: red, yellow and green.
+
+
+    The characters after the dash in the game object''s name represents which states
+    the traffic light is a member of. A traffic light can be member of more than one
+    state. This is useful when the light can be green in multiple scenarios.
+
+'
+--- !u!1 &431198170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 431198171}
+  - 114: {fileID: 431198175}
+  - 114: {fileID: 431198172}
+  - 33: {fileID: 431198174}
+  - 23: {fileID: 431198173}
+  m_Layer: 0
+  m_Name: TrafficLight-A
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &431198171
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 431198170}
+  m_LocalRotation: {x: 0, y: .976261199, z: 0, w: .216596812}
+  m_LocalPosition: {x: -.167999998, y: 1.5, z: -3.35100007}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 766451951}
+  m_RootOrder: 4
+--- !u!114 &431198172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 431198170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c977d32c715501042945763480a0b401, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!23 &431198173
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 431198170}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4a0098bdbc158574b96fb1c0f4a75931, type: 2}
+  - {fileID: 2100000, guid: a93ba658d19025a44974fdf81d96bc56, type: 2}
+  - {fileID: 2100000, guid: 0a8d7b62f54d52843bd3eb8dd5f7ffb9, type: 2}
+  - {fileID: 2100000, guid: 349a86d6065256b4086e7d3e7a648ea3, type: 2}
+  - {fileID: 2100000, guid: 15ced198acec4374b88412d0315f9174, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &431198174
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 431198170}
+  m_Mesh: {fileID: 4300012, guid: 46095e4eb03dd1446b4d92db01f725c1, type: 3}
+--- !u!114 &431198175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 431198170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -759153396, guid: 5b8d02639d7d5a043a36bdf69a81f64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'This is a single traffic light with 3 colors: red, yellow and green.
+
+
+    The characters after the dash in the game object''s name represents which states
+    the traffic light is a member of. A traffic light can be member of more than one
+    state. This is useful when the light can be green in multiple scenarios.
+
+'
+--- !u!1 &451211889
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 451211890}
+  - 222: {fileID: 451211892}
+  - 114: {fileID: 451211891}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &451211890
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 451211889}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1865930950}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &451211891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 451211889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 6
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_RichText: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: 'Demo of the timeline editor window.
+
+    The states of the traffic lights are logged to the timeline.
+
+    Open the timeline window to see what is logged.
+
+    Open TrafficLightIntersectionController.cs to see how easy it is to log.'
+--- !u!222 &451211892
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 451211889}
 --- !u!1 &454497196
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,6 +795,122 @@ MonoBehaviour:
   minHeightScale: .800000012
   maxHeightScale: 3.5
   maxTime: 30
+--- !u!4 &550758200
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400008, guid: 46095e4eb03dd1446b4d92db01f725c1, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1131707819}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -.138000011, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2128647896}
+  - {fileID: 881709669}
+  - {fileID: 820857006}
+  m_Father: {fileID: 766451951}
+  m_RootOrder: 0
+--- !u!1 &699063685
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 699063686}
+  - 114: {fileID: 699063691}
+  - 114: {fileID: 699063687}
+  - 33: {fileID: 699063690}
+  - 23: {fileID: 699063688}
+  m_Layer: 0
+  m_Name: TrafficLightIntersectionController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &699063686
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 699063685}
+  m_LocalRotation: {x: 0, y: .218702167, z: 0, w: .975791693}
+  m_LocalPosition: {x: .0549999997, y: .41170001, z: 1.87800002}
+  m_LocalScale: {x: .200000003, y: .100000001, z: .0500000007}
+  m_Children: []
+  m_Father: {fileID: 766451951}
+  m_RootOrder: 1
+--- !u!114 &699063687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 699063685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf3ab527bf7d1042bc51f410370fd0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pattern: DAABBCC
+--- !u!23 &699063688
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 699063685}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &699063690
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 699063685}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &699063691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 699063685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -759153396, guid: 5b8d02639d7d5a043a36bdf69a81f64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'This is the controller for the intersection.
+
+
+    It works using a pattern of characters. Each character in the pattern is a state.
+    Any traffic light being a member of this state will be green when the state is
+    active.
+
+
+    If the pattern reads ''ABC'' the first all traffic lights that are members of
+    A will be green, then members of B and then members of C.
+
+
+    Each state is 5 seconds long. You can double the length of a state by letting
+    it appear twice like so ''ABBC''.
+
+'
 --- !u!1 &703311620
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,7 +1062,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3369c2fb431ccf641bcbf4562209ce7e, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3369c2fb431ccf641bcbf4562209ce7e, type: 3}
       propertyPath: m_LocalScale.x
@@ -559,6 +1083,282 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 3369c2fb431ccf641bcbf4562209ce7e, type: 3}
   m_PrefabInternal: {fileID: 754759179}
+--- !u!1 &766451950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 766451951}
+  - 65: {fileID: 766451952}
+  m_Layer: 0
+  m_Name: ScaleModel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &766451951
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 766451950}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -.182999998, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 550758200}
+  - {fileID: 699063686}
+  - {fileID: 1558059815}
+  - {fileID: 1113866815}
+  - {fileID: 431198171}
+  - {fileID: 1375951359}
+  - {fileID: 978567677}
+  - {fileID: 1689595687}
+  - {fileID: 1809830468}
+  - {fileID: 191220589}
+  - {fileID: 1650878627}
+  - {fileID: 2068257831}
+  - {fileID: 1371561837}
+  - {fileID: 340317276}
+  - {fileID: 1593150133}
+  m_Father: {fileID: 236424314}
+  m_RootOrder: 0
+--- !u!65 &766451952
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 766451950}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 16, y: 5, z: 16}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &820857005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100010, guid: 46095e4eb03dd1446b4d92db01f725c1, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 820857006}
+  - 33: {fileID: 820857008}
+  - 23: {fileID: 820857007}
+  m_Layer: 0
+  m_Name: Stand_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &820857006
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400010, guid: 46095e4eb03dd1446b4d92db01f725c1, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 820857005}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 550758200}
+  m_RootOrder: 2
+--- !u!23 &820857007
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300008, guid: 46095e4eb03dd1446b4d92db01f725c1,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 820857005}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 960dcee89fe688f4e81f011684d19c28, type: 2}
+  - {fileID: 2100000, guid: 60d3f6575dcdaaf4a95e807543436ec5, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &820857008
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300008, guid: 46095e4eb03dd1446b4d92db01f725c1,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 820857005}
+  m_Mesh: {fileID: 4300000, guid: 46095e4eb03dd1446b4d92db01f725c1, type: 3}
+--- !u!1 &881709666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100006, guid: 46095e4eb03dd1446b4d92db01f725c1, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 881709669}
+  - 33: {fileID: 881709668}
+  - 23: {fileID: 881709667}
+  m_Layer: 0
+  m_Name: Glass_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &881709667
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300006, guid: 46095e4eb03dd1446b4d92db01f725c1,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 881709666}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 488bb26b28c61ce438aca0c82dd45702, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &881709668
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300006, guid: 46095e4eb03dd1446b4d92db01f725c1,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 881709666}
+  m_Mesh: {fileID: 4300002, guid: 46095e4eb03dd1446b4d92db01f725c1, type: 3}
+--- !u!4 &881709669
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400006, guid: 46095e4eb03dd1446b4d92db01f725c1, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 881709666}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 550758200}
+  m_RootOrder: 1
+--- !u!1 &978567676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 978567677}
+  - 114: {fileID: 978567681}
+  - 114: {fileID: 978567678}
+  - 33: {fileID: 978567680}
+  - 23: {fileID: 978567679}
+  m_Layer: 0
+  m_Name: TrafficLight-AD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &978567677
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 978567676}
+  m_LocalRotation: {x: 0, y: .219587758, z: 0, w: -.975592792}
+  m_LocalPosition: {x: -1.48899996, y: 1.5, z: -.0979999974}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 766451951}
+  m_RootOrder: 6
+--- !u!114 &978567678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 978567676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c977d32c715501042945763480a0b401, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!23 &978567679
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 978567676}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4a0098bdbc158574b96fb1c0f4a75931, type: 2}
+  - {fileID: 2100000, guid: a93ba658d19025a44974fdf81d96bc56, type: 2}
+  - {fileID: 2100000, guid: 0a8d7b62f54d52843bd3eb8dd5f7ffb9, type: 2}
+  - {fileID: 2100000, guid: 349a86d6065256b4086e7d3e7a648ea3, type: 2}
+  - {fileID: 2100000, guid: 15ced198acec4374b88412d0315f9174, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &978567680
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 978567676}
+  m_Mesh: {fileID: 4300012, guid: 46095e4eb03dd1446b4d92db01f725c1, type: 3}
+--- !u!114 &978567681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 978567676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -759153396, guid: 5b8d02639d7d5a043a36bdf69a81f64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'This is a single traffic light with 3 colors: red, yellow and green.
+
+
+    The characters after the dash in the game object''s name represents which states
+    the traffic light is a member of. A traffic light can be member of more than one
+    state. This is useful when the light can be green in multiple scenarios.
+
+'
 --- !u!1 &1100810143
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,6 +1432,102 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!1 &1113866814
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1113866815}
+  - 114: {fileID: 1113866819}
+  - 114: {fileID: 1113866816}
+  - 33: {fileID: 1113866818}
+  - 23: {fileID: 1113866817}
+  m_Layer: 0
+  m_Name: TrafficLight-A
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1113866815
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1113866814}
+  m_LocalRotation: {x: 0, y: -.284201831, z: 0, w: .958764493}
+  m_LocalPosition: {x: -2.89599991, y: 1.5, z: 3.28900003}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 766451951}
+  m_RootOrder: 3
+--- !u!114 &1113866816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1113866814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c977d32c715501042945763480a0b401, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!23 &1113866817
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1113866814}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4a0098bdbc158574b96fb1c0f4a75931, type: 2}
+  - {fileID: 2100000, guid: a93ba658d19025a44974fdf81d96bc56, type: 2}
+  - {fileID: 2100000, guid: 0a8d7b62f54d52843bd3eb8dd5f7ffb9, type: 2}
+  - {fileID: 2100000, guid: 349a86d6065256b4086e7d3e7a648ea3, type: 2}
+  - {fileID: 2100000, guid: 15ced198acec4374b88412d0315f9174, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &1113866818
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1113866814}
+  m_Mesh: {fileID: 4300012, guid: 46095e4eb03dd1446b4d92db01f725c1, type: 3}
+--- !u!114 &1113866819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1113866814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -759153396, guid: 5b8d02639d7d5a043a36bdf69a81f64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'This is a single traffic light with 3 colors: red, yellow and green.
+
+
+    The characters after the dash in the game object''s name represents which states
+    the traffic light is a member of. A traffic light can be member of more than one
+    state. This is useful when the light can be green in multiple scenarios.
+
+'
 --- !u!1 &1117332772
 GameObject:
   m_ObjectHideFlags: 0
@@ -733,6 +1629,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!1 &1131707819
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100008, guid: 46095e4eb03dd1446b4d92db01f725c1, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 550758200}
+  m_Layer: 0
+  m_Name: ModelIntersection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1142466352
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,6 +1747,198 @@ Transform:
   - {fileID: 1100810144}
   m_Father: {fileID: 0}
   m_RootOrder: 8
+--- !u!1 &1371561836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1371561837}
+  - 114: {fileID: 1371561841}
+  - 114: {fileID: 1371561838}
+  - 33: {fileID: 1371561840}
+  - 23: {fileID: 1371561839}
+  m_Layer: 0
+  m_Name: TrafficLight-B
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1371561837
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1371561836}
+  m_LocalRotation: {x: 0, y: .79064393, z: 0, w: -.612276256}
+  m_LocalPosition: {x: .966000021, y: 1.5, z: -2.09100008}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 766451951}
+  m_RootOrder: 12
+--- !u!114 &1371561838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1371561836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c977d32c715501042945763480a0b401, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!23 &1371561839
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1371561836}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4a0098bdbc158574b96fb1c0f4a75931, type: 2}
+  - {fileID: 2100000, guid: a93ba658d19025a44974fdf81d96bc56, type: 2}
+  - {fileID: 2100000, guid: 0a8d7b62f54d52843bd3eb8dd5f7ffb9, type: 2}
+  - {fileID: 2100000, guid: 349a86d6065256b4086e7d3e7a648ea3, type: 2}
+  - {fileID: 2100000, guid: 15ced198acec4374b88412d0315f9174, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &1371561840
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1371561836}
+  m_Mesh: {fileID: 4300012, guid: 46095e4eb03dd1446b4d92db01f725c1, type: 3}
+--- !u!114 &1371561841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1371561836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -759153396, guid: 5b8d02639d7d5a043a36bdf69a81f64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'This is a single traffic light with 3 colors: red, yellow and green.
+
+
+    The characters after the dash in the game object''s name represents which states
+    the traffic light is a member of. A traffic light can be member of more than one
+    state. This is useful when the light can be green in multiple scenarios.
+
+'
+--- !u!1 &1375951358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1375951359}
+  - 114: {fileID: 1375951363}
+  - 114: {fileID: 1375951360}
+  - 33: {fileID: 1375951362}
+  - 23: {fileID: 1375951361}
+  m_Layer: 0
+  m_Name: TrafficLight-A
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1375951359
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1375951358}
+  m_LocalRotation: {x: 0, y: .993061125, z: 0, w: .117599815}
+  m_LocalPosition: {x: 1.27499998, y: 1.5, z: -2.89700007}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 766451951}
+  m_RootOrder: 5
+--- !u!114 &1375951360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1375951358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c977d32c715501042945763480a0b401, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!23 &1375951361
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1375951358}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4a0098bdbc158574b96fb1c0f4a75931, type: 2}
+  - {fileID: 2100000, guid: a93ba658d19025a44974fdf81d96bc56, type: 2}
+  - {fileID: 2100000, guid: 0a8d7b62f54d52843bd3eb8dd5f7ffb9, type: 2}
+  - {fileID: 2100000, guid: 349a86d6065256b4086e7d3e7a648ea3, type: 2}
+  - {fileID: 2100000, guid: 15ced198acec4374b88412d0315f9174, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &1375951362
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1375951358}
+  m_Mesh: {fileID: 4300012, guid: 46095e4eb03dd1446b4d92db01f725c1, type: 3}
+--- !u!114 &1375951363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1375951358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -759153396, guid: 5b8d02639d7d5a043a36bdf69a81f64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'This is a single traffic light with 3 colors: red, yellow and green.
+
+
+    The characters after the dash in the game object''s name represents which states
+    the traffic light is a member of. A traffic light can be member of more than one
+    state. This is useful when the light can be green in multiple scenarios.
+
+'
 --- !u!1 &1446508890
 GameObject:
   m_ObjectHideFlags: 0
@@ -891,11 +1994,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1446508890}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 299.290009, y: 3.3499999, z: -16.3460007}
+  m_LocalPosition: {x: 0, y: -.464000225, z: 0}
   m_LocalScale: {x: 2, y: .100000001, z: 2}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 7368676}
+  m_RootOrder: 3
 --- !u!1 &1500476141
 GameObject:
   m_ObjectHideFlags: 0
@@ -969,6 +2072,198 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!1 &1558059814
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1558059815}
+  - 114: {fileID: 1558059819}
+  - 114: {fileID: 1558059818}
+  - 33: {fileID: 1558059817}
+  - 23: {fileID: 1558059816}
+  m_Layer: 0
+  m_Name: TrafficLight-A
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1558059815
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1558059814}
+  m_LocalRotation: {x: 0, y: -.128450274, z: 0, w: .991715968}
+  m_LocalPosition: {x: -3.90700006, y: 1.5, z: 2.47000003}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 766451951}
+  m_RootOrder: 2
+--- !u!23 &1558059816
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1558059814}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4a0098bdbc158574b96fb1c0f4a75931, type: 2}
+  - {fileID: 2100000, guid: a93ba658d19025a44974fdf81d96bc56, type: 2}
+  - {fileID: 2100000, guid: 0a8d7b62f54d52843bd3eb8dd5f7ffb9, type: 2}
+  - {fileID: 2100000, guid: 349a86d6065256b4086e7d3e7a648ea3, type: 2}
+  - {fileID: 2100000, guid: 15ced198acec4374b88412d0315f9174, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &1558059817
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1558059814}
+  m_Mesh: {fileID: 4300012, guid: 46095e4eb03dd1446b4d92db01f725c1, type: 3}
+--- !u!114 &1558059818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1558059814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c977d32c715501042945763480a0b401, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1558059819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1558059814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -759153396, guid: 5b8d02639d7d5a043a36bdf69a81f64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'This is a single traffic light with 3 colors: red, yellow and green.
+
+
+    The characters after the dash in the game object''s name represents which states
+    the traffic light is a member of. A traffic light can be member of more than one
+    state. This is useful when the light can be green in multiple scenarios.
+
+'
+--- !u!1 &1593150132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1593150133}
+  - 114: {fileID: 1593150137}
+  - 114: {fileID: 1593150134}
+  - 33: {fileID: 1593150136}
+  - 23: {fileID: 1593150135}
+  m_Layer: 0
+  m_Name: TrafficLight-C
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1593150133
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1593150132}
+  m_LocalRotation: {x: 0, y: .576007783, z: 0, w: .817444265}
+  m_LocalPosition: {x: .0189999994, y: 1.5, z: 1.51999998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 766451951}
+  m_RootOrder: 14
+--- !u!114 &1593150134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1593150132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c977d32c715501042945763480a0b401, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!23 &1593150135
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1593150132}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4a0098bdbc158574b96fb1c0f4a75931, type: 2}
+  - {fileID: 2100000, guid: a93ba658d19025a44974fdf81d96bc56, type: 2}
+  - {fileID: 2100000, guid: 0a8d7b62f54d52843bd3eb8dd5f7ffb9, type: 2}
+  - {fileID: 2100000, guid: 349a86d6065256b4086e7d3e7a648ea3, type: 2}
+  - {fileID: 2100000, guid: 15ced198acec4374b88412d0315f9174, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &1593150136
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1593150132}
+  m_Mesh: {fileID: 4300012, guid: 46095e4eb03dd1446b4d92db01f725c1, type: 3}
+--- !u!114 &1593150137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1593150132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -759153396, guid: 5b8d02639d7d5a043a36bdf69a81f64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'This is a single traffic light with 3 colors: red, yellow and green.
+
+
+    The characters after the dash in the game object''s name represents which states
+    the traffic light is a member of. A traffic light can be member of more than one
+    state. This is useful when the light can be green in multiple scenarios.
+
+'
 --- !u!1 &1597568481
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,6 +2324,102 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!1 &1650878626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1650878627}
+  - 114: {fileID: 1650878631}
+  - 114: {fileID: 1650878628}
+  - 33: {fileID: 1650878630}
+  - 23: {fileID: 1650878629}
+  m_Layer: 0
+  m_Name: TrafficLight-B
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1650878627
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1650878626}
+  m_LocalRotation: {x: 0, y: .285389632, z: 0, w: .958411634}
+  m_LocalPosition: {x: -3.56299996, y: 1.5, z: 1.68200004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 766451951}
+  m_RootOrder: 10
+--- !u!114 &1650878628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1650878626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c977d32c715501042945763480a0b401, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!23 &1650878629
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1650878626}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4a0098bdbc158574b96fb1c0f4a75931, type: 2}
+  - {fileID: 2100000, guid: a93ba658d19025a44974fdf81d96bc56, type: 2}
+  - {fileID: 2100000, guid: 0a8d7b62f54d52843bd3eb8dd5f7ffb9, type: 2}
+  - {fileID: 2100000, guid: 349a86d6065256b4086e7d3e7a648ea3, type: 2}
+  - {fileID: 2100000, guid: 15ced198acec4374b88412d0315f9174, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &1650878630
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1650878626}
+  m_Mesh: {fileID: 4300012, guid: 46095e4eb03dd1446b4d92db01f725c1, type: 3}
+--- !u!114 &1650878631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1650878626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -759153396, guid: 5b8d02639d7d5a043a36bdf69a81f64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'This is a single traffic light with 3 colors: red, yellow and green.
+
+
+    The characters after the dash in the game object''s name represents which states
+    the traffic light is a member of. A traffic light can be member of more than one
+    state. This is useful when the light can be green in multiple scenarios.
+
+'
 --- !u!1 &1670157310
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,6 +2461,102 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!1 &1689595686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1689595687}
+  - 114: {fileID: 1689595691}
+  - 114: {fileID: 1689595688}
+  - 33: {fileID: 1689595690}
+  - 23: {fileID: 1689595689}
+  m_Layer: 0
+  m_Name: TrafficLight-AD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1689595687
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1689595686}
+  m_LocalRotation: {x: 0, y: .219587758, z: 0, w: -.975592792}
+  m_LocalPosition: {x: -2.70700002, y: 1.5, z: -.540000021}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 766451951}
+  m_RootOrder: 7
+--- !u!114 &1689595688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1689595686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c977d32c715501042945763480a0b401, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!23 &1689595689
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1689595686}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4a0098bdbc158574b96fb1c0f4a75931, type: 2}
+  - {fileID: 2100000, guid: a93ba658d19025a44974fdf81d96bc56, type: 2}
+  - {fileID: 2100000, guid: 0a8d7b62f54d52843bd3eb8dd5f7ffb9, type: 2}
+  - {fileID: 2100000, guid: 349a86d6065256b4086e7d3e7a648ea3, type: 2}
+  - {fileID: 2100000, guid: 15ced198acec4374b88412d0315f9174, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &1689595690
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1689595686}
+  m_Mesh: {fileID: 4300012, guid: 46095e4eb03dd1446b4d92db01f725c1, type: 3}
+--- !u!114 &1689595691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1689595686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -759153396, guid: 5b8d02639d7d5a043a36bdf69a81f64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'This is a single traffic light with 3 colors: red, yellow and green.
+
+
+    The characters after the dash in the game object''s name represents which states
+    the traffic light is a member of. A traffic light can be member of more than one
+    state. This is useful when the light can be green in multiple scenarios.
+
+'
 --- !u!1 &1793473175
 GameObject:
   m_ObjectHideFlags: 0
@@ -1144,6 +2631,187 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!1 &1809830467
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1809830468}
+  - 114: {fileID: 1809830472}
+  - 114: {fileID: 1809830469}
+  - 33: {fileID: 1809830471}
+  - 23: {fileID: 1809830470}
+  m_Layer: 0
+  m_Name: TrafficLight-B
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1809830468
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1809830467}
+  m_LocalRotation: {x: 0, y: .48715207, z: 0, w: .873317182}
+  m_LocalPosition: {x: -1.70000005, y: 1.5, z: 4.83699989}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 766451951}
+  m_RootOrder: 8
+--- !u!114 &1809830469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1809830467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c977d32c715501042945763480a0b401, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!23 &1809830470
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1809830467}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4a0098bdbc158574b96fb1c0f4a75931, type: 2}
+  - {fileID: 2100000, guid: a93ba658d19025a44974fdf81d96bc56, type: 2}
+  - {fileID: 2100000, guid: 0a8d7b62f54d52843bd3eb8dd5f7ffb9, type: 2}
+  - {fileID: 2100000, guid: 349a86d6065256b4086e7d3e7a648ea3, type: 2}
+  - {fileID: 2100000, guid: 15ced198acec4374b88412d0315f9174, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &1809830471
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1809830467}
+  m_Mesh: {fileID: 4300012, guid: 46095e4eb03dd1446b4d92db01f725c1, type: 3}
+--- !u!114 &1809830472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1809830467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -759153396, guid: 5b8d02639d7d5a043a36bdf69a81f64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'This is a single traffic light with 3 colors: red, yellow and green.
+
+
+    The characters after the dash in the game object''s name represents which states
+    the traffic light is a member of. A traffic light can be member of more than one
+    state. This is useful when the light can be green in multiple scenarios.
+
+'
+--- !u!1 &1865930949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1865930950}
+  - 223: {fileID: 1865930952}
+  - 114: {fileID: 1865930951}
+  - 114: {fileID: 1865930953}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1865930950
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1865930949}
+  m_LocalRotation: {x: 2.15105724e-16, y: -.158776507, z: -1.89276346e-08, w: .987314582}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: .0500000119, y: .0500000007, z: .0500000082}
+  m_Children:
+  - {fileID: 451211890}
+  m_Father: {fileID: 236424314}
+  m_RootOrder: 1
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 3.052001}
+  m_SizeDelta: {x: 120, y: 40}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1865930951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1865930949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 200
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 20
+--- !u!223 &1865930952
+Canvas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1865930949}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!114 &1865930953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1865930949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4595f08b025b941b9c5c6a57e7329f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1934865852
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,26 +2923,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 496262, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: .532675207
+      objectReference: {fileID: 0}
+    - target: {fileID: 496262, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: .0703404546
+      objectReference: {fileID: 0}
+    - target: {fileID: 496262, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: .836132765
+      objectReference: {fileID: 0}
+    - target: {fileID: 496262, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: -.110415146
+      objectReference: {fileID: 0}
     - target: {fileID: 11430612, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
       propertyPath: characterSelector
       value: 
       objectReference: {fileID: 703311621}
-    - target: {fileID: 496262, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: .532675147
-      objectReference: {fileID: 0}
-    - target: {fileID: 496262, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: .0703404471
-      objectReference: {fileID: 0}
-    - target: {fileID: 496262, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: .836132646
-      objectReference: {fileID: 0}
-    - target: {fileID: 496262, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: -.110415131
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
   m_IsPrefabParent: 0
@@ -1338,3 +3006,161 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7368676}
   m_RootOrder: 0
+--- !u!1 &2068257830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2068257831}
+  - 114: {fileID: 2068257835}
+  - 114: {fileID: 2068257832}
+  - 33: {fileID: 2068257834}
+  - 23: {fileID: 2068257833}
+  m_Layer: 0
+  m_Name: TrafficLight-B
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2068257831
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2068257830}
+  m_LocalRotation: {x: 0, y: .79064393, z: 0, w: -.612276256}
+  m_LocalPosition: {x: -1.60399997, y: 1.5, z: -3.579}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 766451951}
+  m_RootOrder: 11
+--- !u!114 &2068257832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2068257830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c977d32c715501042945763480a0b401, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!23 &2068257833
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2068257830}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4a0098bdbc158574b96fb1c0f4a75931, type: 2}
+  - {fileID: 2100000, guid: a93ba658d19025a44974fdf81d96bc56, type: 2}
+  - {fileID: 2100000, guid: 0a8d7b62f54d52843bd3eb8dd5f7ffb9, type: 2}
+  - {fileID: 2100000, guid: 349a86d6065256b4086e7d3e7a648ea3, type: 2}
+  - {fileID: 2100000, guid: 15ced198acec4374b88412d0315f9174, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &2068257834
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2068257830}
+  m_Mesh: {fileID: 4300012, guid: 46095e4eb03dd1446b4d92db01f725c1, type: 3}
+--- !u!114 &2068257835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2068257830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -759153396, guid: 5b8d02639d7d5a043a36bdf69a81f64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'This is a single traffic light with 3 colors: red, yellow and green.
+
+
+    The characters after the dash in the game object''s name represents which states
+    the traffic light is a member of. A traffic light can be member of more than one
+    state. This is useful when the light can be green in multiple scenarios.
+
+'
+--- !u!1 &2128647895
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 46095e4eb03dd1446b4d92db01f725c1, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2128647896}
+  - 33: {fileID: 2128647898}
+  - 23: {fileID: 2128647897}
+  m_Layer: 0
+  m_Name: Buildings_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2128647896
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 46095e4eb03dd1446b4d92db01f725c1, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2128647895}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 550758200}
+  m_RootOrder: 0
+--- !u!23 &2128647897
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: 46095e4eb03dd1446b4d92db01f725c1,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2128647895}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 317038a6ae21af14aa497f3a85e1f0cc, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &2128647898
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: 46095e4eb03dd1446b4d92db01f725c1,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2128647895}
+  m_Mesh: {fileID: 4300004, guid: 46095e4eb03dd1446b4d92db01f725c1, type: 3}

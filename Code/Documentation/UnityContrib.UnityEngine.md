@@ -1058,6 +1058,136 @@ Returns the selected [UnityEngine.Transform](http://docs.unity3d.com/ScriptRefer
 
 The selected
 
+## UnityContrib.UnityEngine.TimelineLog
+
+Records an entry for the timeline.
+
+### Members
+
+#### sources
+
+Hashtable of sources. The key is the name of the source. The value is another hashtable containing the categories of the source.
+
+#### source
+
+The source of the entry.
+
+#### category
+
+The category of the entry.
+
+#### message
+
+The message of the entry.
+
+#### start
+
+The time in seconds when the log entry started.
+
+#### Color
+
+Gets or sets the color of the log entry when displayed.
+
+#### Sources
+
+Gets the sources logged.
+
+#### MaxTime
+
+Gets the maximum time in seconds logged.
+
+#### TotalSources
+
+Gets the number of sources logged.
+
+#### TotalCategories
+
+Gets the number of categories logged across sources.
+
+#### #ctor(System.String,System.String,System.String)
+
+Initializes a new instance of the UnityContrib.UnityEngine.TimelineLog class.
+
+##### source
+
+The source of the entry.
+
+##### category
+
+The category of the entry.
+
+##### message
+
+The message of the entry.
+
+#### Dispose
+
+Finalizes the log entry and records it.
+
+#### Clear
+
+Clears the timeline.
+
+## UnityContrib.UnityEngine.TimelineLogEntry
+
+Log entry for the timeline.
+
+### Members
+
+#### Message
+
+Gets the message for the log entry.
+
+#### Start
+
+Gets the time in seconds when the log entry started.
+
+#### End
+
+Gets the time in seconds when the log entry ended.
+
+#### Color
+
+Gets the color of the log entry when displayed.
+
+#### #ctor(System.String,System.Single,System.Single,UnityEngine.Color)
+
+Initializes a new instance of the UnityContrib.UnityEngine.TimelineLogEntry class.
+
+##### message
+
+The textual message for the log entry.
+
+##### start
+
+The time in seconds when the log entry started.
+
+##### end
+
+The time in seconds when the log entry started.
+
+##### color
+
+The color of the log entry when displayed.
+
+## UnityContrib.UnityEngine.TimelineLogSource
+
+Source information for log entries in the timeline.
+
+### Members
+
+#### Categories
+
+Gets the categories of the source.
+
+#### IsFolded
+
+Gets or sets a value indicating if the source is folded as opposed to expanded.
+
+#### #ctor
+
+Initializes a new instance of the UnityContrib.UnityEngine class.
+
 ## UnityContrib.UnityEngine.TransformEx
 
 Provides helper methods for working with the [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) class.

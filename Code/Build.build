@@ -118,26 +118,34 @@
 	</target>
 
 	<target name="compress" description="Compresses the assemblies">
-		<zip comment="Version: ${custom::to-assembly-file-version(now)}" zipfile="${baseDir}/Releases/UnityContrib.${custom::to-assembly-file-version(now)}.zip" ziplevel="9">
-			<fileset prefix="Debug" basedir="${baseDir}\UnityContrib.UnityEngine\bin\Debug">
+		<zip comment="Version: ${custom::to-assembly-file-version(now)}" zipfile="${baseDir}/Releases/UnityContrib.${custom::to-assembly-file-version(now)}.DEBUG.zip" ziplevel="9">
+			<fileset prefix="UnityContrib\Assemblies" basedir="${baseDir}\UnityContrib.UnityEngine\bin\Debug">
 				<include name="UnityContrib.UnityEngine.dll"/>
 				<include name="UnityContrib.UnityEngine.dll.mdb"/>
 				<include name="UnityContrib.UnityEngine.xml"/>
 			</fileset>
-			<fileset prefix="Debug\Editor" basedir="${baseDir}\UnityContrib.UnityEditor\bin\Debug">
+			<fileset prefix="UnityContrib\Assemblies\Editor" basedir="${baseDir}\UnityContrib.UnityEditor\bin\Debug">
 				<include name="UnityContrib.UnityEditor.dll"/>
 				<include name="UnityContrib.UnityEditor.dll.mdb"/>
 				<include name="UnityContrib.UnityEditor.xml"/>
 			</fileset>
-			<fileset prefix="Release" basedir="${baseDir}\UnityContrib.UnityEngine\bin\Release">
+			<fileset prefix="UnityContrib" basedir="${baseDir}\Content">
+				<include name="*/**"/>
+			</fileset>
+		</zip>
+		<zip comment="Version: ${custom::to-assembly-file-version(now)}" zipfile="${baseDir}/Releases/UnityContrib.${custom::to-assembly-file-version(now)}.RELEASE.zip" ziplevel="9">
+			<fileset prefix="UnityContrib\Assemblies" basedir="${baseDir}\UnityContrib.UnityEngine\bin\Release">
 				<include name="UnityContrib.UnityEngine.dll"/>
 				<include name="UnityContrib.UnityEngine.dll.mdb"/>
 				<include name="UnityContrib.UnityEngine.xml"/>
 			</fileset>
-			<fileset prefix="Release\Editor" basedir="${baseDir}\UnityContrib.UnityEditor\bin\Release">
+			<fileset prefix="UnityContrib\Assemblies\Editor" basedir="${baseDir}\UnityContrib.UnityEditor\bin\Release">
 				<include name="UnityContrib.UnityEditor.dll"/>
 				<include name="UnityContrib.UnityEditor.dll.mdb"/>
 				<include name="UnityContrib.UnityEditor.xml"/>
+			</fileset>
+			<fileset prefix="UnityContrib" basedir="${baseDir}\Content">
+				<include name="*/**"/>
 			</fileset>
 		</zip>
 	</target>

@@ -32,9 +32,6 @@ public class CalculateSlopeArrow : MonoBehaviour
     /// </returns>
     private IEnumerator Start()
     {
-        var textParent = this.text.transform.parent;
-        var camera = Camera.main.transform;
-
         while (Application.isPlaying)
         {
             var forward = new Vector3(
@@ -52,7 +49,6 @@ public class CalculateSlopeArrow : MonoBehaviour
                 + "float CalculateSlopeRad(Vector3 normal)" + Environment.NewLine
                 + forward.CalculateSlopeDeg().ToString("#,##0.00°")
                 ;
-            textParent.forward = textParent.position - camera.position;
 
             yield return null;
         }
