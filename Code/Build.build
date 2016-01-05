@@ -7,7 +7,7 @@
 			[Function( "to-assembly-version" )]
 			public static string ToAssemblyVersion( DateTime dateTime )
 			{
-				return dateTime.ToString( "yyyy.MM.dd.\\*" );
+				return dateTime.ToString( "yyyy.MM.dd.HHmm" );
 			}
 
 			[Function( "to-assembly-file-version" )]
@@ -149,7 +149,7 @@
 			</fileset>
 		</zip>
 	</target>
-	
+
 	<target name="copy-to-unity" description="Copies assemblies and MDB to Unity project">
 		<copy todir=".\..\Unity\Assets\UnityContrib\Assemblies" overwrite="true">
 			<fileset basedir="${baseDir}\UnityContrib.UnityEngine\bin\Debug">

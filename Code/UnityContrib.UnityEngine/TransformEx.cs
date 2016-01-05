@@ -25,6 +25,22 @@ namespace UnityContrib.UnityEngine
         }
 
         /// <summary>
+        /// Destroys all the children of the specified <paramref name="parent"/> <see cref="T:UnityEngine.Transform"/>.
+        /// </summary>
+        /// <param name="parent">
+        /// The parent <see cref="T:UnityEngine.Transform"/> who's children to destroy.
+        /// </param>
+        public static void DestroyImmediateAllChildren(this Transform parent)
+        {
+            // starting at the back of the list to ensure it still works the day Unity destroys the children immediatly
+            for (var index = parent.childCount - 1; index >= 0; index--)
+            {
+                var child = parent.GetChild(index);
+                GameObject.DestroyImmediate(child.gameObject);
+            }
+        }
+
+        /// <summary>
         /// Returns all the decendant <see cref="T:UnityEngine.Transform"/> to the specified <paramref name="transform"/> using depth first traversal.
         /// </summary>
         /// <param name="transform">

@@ -1202,6 +1202,14 @@ Destroys all the children of the specified parent  [UnityEngine.Transform](http:
 
 The parent [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) who's children to destroy.
 
+#### DestroyImmediateAllChildren(UnityEngine.Transform)
+
+Destroys all the children of the specified parent  [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) .
+
+##### parent
+
+The parent [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) who's children to destroy.
+
 #### DecendantsDepthFirst(UnityEngine.Transform)
 
 Returns all the decendant [UnityEngine.Transform](http://docs.unity3d.com/ScriptReference/Transform.html) to the specified transform using depth first traversal.
